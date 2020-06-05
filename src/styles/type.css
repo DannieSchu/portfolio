@@ -1,0 +1,42 @@
+.mainHeading {
+  font-family: var(--display-font);
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--salmon);
+}
+
+.pageHeading {
+  font-family: var(--display-font);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.pullOut {
+  font-family: var(--display-font);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.subheading {
+  font-family: var(--display-font);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.allCaps {
+  font-family: var(--body-font);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--white);
+}
