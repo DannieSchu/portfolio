@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders Home 1`] = `
+<section
+  className="Home"
+>
+  <img
+    alt="home"
+    className="home"
+    src="/path/image"
+  />
+  <h1
+    className="mainHeading"
+  >
+    Dannie
+    <br />
+    Schumaker
+  </h1>
+  <img
+    alt="flower illustration"
+    className="largeFlowers"
+    src="/path/image"
+  />
+  <img
+    alt="flower illustration"
+    className="smallFlowers"
+    src="/path/image"
+  />
+</section>
+`;

@@ -1,0 +1,20 @@
+.Home {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(226, 233, 226);
+
+  h1 {
+    position: relative;
+    top: 8%;
+    right: 10%;
+    margin: 0;
+  }
+}
+
+.home {
+  width: 3rem;
+}
+
+.largeFlowers {
+  width: 40%;
+}
