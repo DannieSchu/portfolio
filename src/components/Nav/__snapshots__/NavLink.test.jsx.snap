@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavLink component renders NavLink 1`] = `
+<Link
+  activeClass="active"
+  className="NavLink"
+  duration={800}
+  offset={0}
+  smooth={true}
+  spy={true}
+  to="Home"
+>
+  <img
+    alt="Home"
+    className="outline"
+    src="home.png"
+  />
+  <img
+    alt="Home active"
+    className="solid"
+    src="home-active.png"
+  />
+  <p
+    className="allCaps"
+  >
+    Home
+  </p>
+</Link>
+`;
