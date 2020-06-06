@@ -9,7 +9,7 @@ const NavLink = ({ to, icon, activeIcon }) => (
     to={to}
     spy={true}
     smooth={true}
-    duration={400}
+    duration={800}
     activeClass={styles.active}
     className={styles.NavLink}>
     <img src={icon} alt={to} className={styles.outline} />
