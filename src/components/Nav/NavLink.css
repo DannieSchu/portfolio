@@ -1,0 +1,24 @@
+.NavLink {
+  cursor: pointer;
+  height: 4rem;
+
+  img {
+    width: 3.5rem;
+  }
+
+  p {
+    display: none;
+    color: var(--white);
+  }
+
+  &:hover {
+    img {
+      display: none;
+    }
+
+    p {
+      display: block;
+      height: 100%;
+    }
+  }
+}

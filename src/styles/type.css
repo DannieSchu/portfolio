@@ -31,7 +31,7 @@
 .allCaps {
   font-family: var(--body-font);
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   color: var(--white);
 }
