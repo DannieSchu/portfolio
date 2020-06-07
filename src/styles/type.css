@@ -10,7 +10,12 @@
 .pageHeading {
   font-family: var(--display-font);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 4.8rem;
+  text-align: right;
+  position: relative;
+  top: 8%;
+  right: 10%;
+  margin: 0;
   color: var(--white);
 }
 
@@ -39,6 +44,6 @@
 .body {
   font-family: var(--body-font);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--white);
 }
