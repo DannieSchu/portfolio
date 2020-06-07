@@ -3,12 +3,8 @@
 exports[`Home component renders Home 1`] = `
 <section
   className="Home"
+  id="Home"
 >
-  <img
-    alt="home"
-    className="home"
-    src="/path/image"
-  />
   <h1
     className="mainHeading"
   >

@@ -1,0 +1,45 @@
+.NavLink {
+  cursor: pointer;
+  height: 4rem;
+
+  img {
+    width: 3.5rem;
+  }
+
+  img.solid, p {
+    display: none;
+  }
+
+  &:hover {
+    img {
+      display: none;
+    }
+
+    p {
+      display: block;
+      height: 100%;
+    }
+  }
+}
+
+.active {
+  img.solid {
+    display: block;
+  }
+
+  img.outline, p {
+    display: none;
+  }
+
+  &:hover {
+    img.solid {
+      display: none;
+    }
+
+    p {
+      display: block;
+      height: 100%;
+      color: var(--salmon);
+    }
+  }
+}

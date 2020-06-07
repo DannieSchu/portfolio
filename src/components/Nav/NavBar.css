@@ -1,0 +1,13 @@
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+  position: fixed;
+  height: 100vh;
+  width: 6rem;
+  z-index: 1;
+  
+  background-color: var(--translucent-charcoal);
+}
