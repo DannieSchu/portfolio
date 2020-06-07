@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component renders About 1`] = `
+<section
+  className="About"
+  id="About"
+>
+  <img
+    alt="Dannie Schumaker"
+    src="/path/image"
+  />
+  <section>
+    <h3
+      className="subheading"
+    >
+      Full-stack software developer who makes 
+      <i>
+        clunky
+      </i>
+       code 
+      <i>
+        beautiful
+      </i>
+      . 
+    </h3>
+    <div
+      className="typewriter"
+    >
+      <p>
+        Documentation fanatic
+      </p>
+      <p>
+        with an eye for detail
+      </p>
+      <p>
+        and a passion for finding elegant solutions to complex problems.
+      </p>
+    </div>
+  </section>
+</section>
+`;
