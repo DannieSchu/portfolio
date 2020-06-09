@@ -47,3 +47,24 @@
   font-size: 1.1rem;
   color: var(--white);
 }
+
+@media only screen and (max-width: 768px) {
+  .mainHeading {
+    font-size: 3rem;
+  }
+
+  .pageHeading {
+    font-size: 3rem;
+    text-align: center;
+    right: 0;
+    top: 4%;
+  }
+
+  .subheading {
+    font-size: 1.3rem;
+  }
+
+  .pullOut {
+    font-size: 1rem;
+  }
+}
