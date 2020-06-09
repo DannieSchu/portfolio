@@ -9,7 +9,7 @@ export const techArr = [
   },
   {
     title: 'Databases',
-    definitions: ['MongoDB (with Mongoose ODM)', 'PostresSQL']
+    definitions: ['MongoDB', 'PostresSQL']
   },
   {
     title: 'Testing Suites',
@@ -17,6 +17,6 @@ export const techArr = [
   },
   {
     title: 'Dev Tools',
-    definitions: ['Travis CI', 'Postman', 'Compass']
+    definitions: ['Mongoose ODM', 'Travis CI', 'Postman', 'Compass']
   }
 ];
