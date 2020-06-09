@@ -1,0 +1,71 @@
+.Strengths {
+  position: relative;
+  height: 100vh;
+
+  .element {
+    width: 35%;
+    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      transition: all .5s ease-in-out;
+    }
+    
+    .content {
+      position: absolute;
+      width: 50%;
+      min-width: 13rem;
+
+      h3 {
+        color: var(--salmon);
+        text-align: center;
+      }
+      
+      .details {
+        display: none;
+      }
+    }
+
+    &:hover {
+      h3 {
+        display: none;
+      }
+  
+      .details {
+        display: block;
+      }
+
+      img {
+        transform: scale(1.1);
+      }
+    } 
+  }
+
+  @media only screen and (min-width: 768px) {  
+    .learner {
+      transform: translate(25%, -30%);
+    }
+    
+    .quality {
+      transform: translate(82%, -50%);
+    }
+    
+    .problemSolver {
+      transform: translate(180%, -190%);
+    }  
+  }
+
+  @media only screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .content {
+        width: 13rem;
+      }
+    }
+}
