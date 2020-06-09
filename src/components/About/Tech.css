@@ -1,0 +1,9 @@
+.Tech {
+  margin-left: 6rem;
+  height: 100vh;
+
+  section {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
