@@ -23,19 +23,45 @@ exports[`About component renders About 1`] = `
       </i>
       . 
     </h3>
-    <div
-      className="typewriter"
+    <Typist
+      avgTypingDelay={110}
+      className=""
+      cursor={
+        Object {
+          "show": false,
+        }
+      }
+      delayGenerator={[Function]}
+      onCharacterTyped={[Function]}
+      onLineTyped={[Function]}
+      onTypingDone={[Function]}
+      startDelay={5000}
+      stdTypingDelay={25}
     >
       <p>
         Documentation fanatic
+        <Delay
+          ms={300}
+        />
+        ...
       </p>
+      <Delay
+        ms={1000}
+      />
       <p>
         with an eye for detail
+        <Delay
+          ms={300}
+        />
+        ...
       </p>
+      <Delay
+        ms={1000}
+      />
       <p>
         and a passion for finding elegant solutions to complex problems.
       </p>
-    </div>
+    </Typist>
   </section>
 </section>
 `;
