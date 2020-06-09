@@ -1,0 +1,22 @@
+.TechItem {
+  width: 100%;
+  display: flex;
+  margin: 10%; 
+  
+  dt.title {
+    width: 40%;
+  }  
+
+  div.definitions {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      dd {
+        font-weight: 300;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin: 5%; 
+  }
+}
