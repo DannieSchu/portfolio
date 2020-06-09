@@ -1,9 +1,9 @@
 import React from 'react';
-import typeStyle from '../../styles/type.css';
-import styles from './Strengths.css';
 import inkBlot from '../../assets/images/splotch.png';
 import roundInkBlot from '../../assets/images/round-splotch.png';
-
+import typeStyle from '../../styles/type.css';
+import styles from './Strengths.css';
+  
 const Strengths = () => {
   return (
     <section className={styles.Strengths}>
