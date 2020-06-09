@@ -1,5 +1,4 @@
 .Home {
-  width: 100vw;
   height: 100vh;
   background-color: rgb(226, 233, 226);
 
@@ -17,4 +16,11 @@
 
 .largeFlowers {
   width: 40%;
+  min-width: 20rem;
+}
+
+.smallFlowers {
+  width: 40%;
+  min-width: 20rem;
+  transform: translate(-20%, 10%);
 }
