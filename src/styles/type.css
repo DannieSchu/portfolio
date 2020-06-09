@@ -13,9 +13,9 @@
   font-size: 4.8rem;
   text-align: right;
   position: relative;
-  top: 8%;
-  right: 10%;
-  margin: 0;
+  top: 7%;
+  right: 9%;
+  margin: 2rem;
   color: var(--white);
 }
 
@@ -57,7 +57,8 @@
     font-size: 3rem;
     text-align: center;
     right: 0;
-    top: 4%;
+    top: 3%;
+    margin: 1rem;
   }
 
   .subheading {
