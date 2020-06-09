@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TechItem component renders TechItem 1`] = `
+<article
+  className="TechItem"
+>
+  <dt
+    className="title pullOut"
+  >
+    Languages
+  </dt>
+  <div
+    className="definitions"
+  >
+    <dd
+      className="pullOut"
+      key="0"
+    >
+      JavaScript
+    </dd>
+    <dd
+      className="pullOut"
+      key="1"
+    >
+      HTML
+    </dd>
+    <dd
+      className="pullOut"
+      key="2"
+    >
+      CSS
+    </dd>
+  </div>
+</article>
+`;
