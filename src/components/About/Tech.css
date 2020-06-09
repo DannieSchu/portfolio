@@ -15,4 +15,17 @@
     flex-flow: column wrap;
   }
   
+  @media only screen and (max-width: 768px) {
+    margin: 0;
+
+    section {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+
+    dl.definitionList {
+      width: 60%;
+    }
+  }
 }
