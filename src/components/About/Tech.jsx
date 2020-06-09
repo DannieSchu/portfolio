@@ -10,8 +10,10 @@ const Tech = () => {
   return (
     <section className={styles.Tech}>
       <h2 className={typeStyle.pageHeading}>Tech Stack</h2>
-      <section>
-        {techElements}
+      <section className={styles.techList}>
+        <dl className={styles.definitionList}>
+          {techElements}
+        </dl>
       </section>
     </section>
   );

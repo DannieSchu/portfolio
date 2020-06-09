@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './TechItem.css';
+import typeStyle from '../../styles/type.css';
 
 const TechItem = ({ title, definitions }) => {
-  const definitionElements = definitions.map((definition, i) => <dd key={i}>{definition}</dd>);
+  const definitionElements = definitions.map((definition, i) => <dd key={i} className={typeStyle.pullOut}>{definition}</dd>);
 
   return (
-    <dl>
-      <dt>{title}</dt>
-      {definitionElements}
-    </dl>
+    <article className={styles.TechItem}>
+      <dt className={`${styles.title} ${typeStyle.pullOut}`}>{title}</dt>
+      <div className={styles.definitions}>
+        {definitionElements}
+      </div>
+    </article>
   );
 };
 
@@ -18,4 +22,3 @@ TechItem.propTypes = {
 };
 
 export default TechItem;
-
