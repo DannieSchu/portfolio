@@ -3,7 +3,7 @@
 exports[`Home component renders Home 1`] = `
 <section
   className="Home"
-  id="Home"
+  name="Home"
 >
   <h1
     className="mainHeading"
@@ -21,6 +21,12 @@ exports[`Home component renders Home 1`] = `
     alt="flower illustration"
     className="smallFlowers"
     src="/path/image"
+  />
+  <Arrow
+    container="AboutContainer"
+    element="About"
+    icon="/path/image"
+    shadowIcon="/path/image"
   />
 </section>
 `;

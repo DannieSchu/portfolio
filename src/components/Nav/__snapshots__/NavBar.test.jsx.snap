@@ -12,6 +12,7 @@ exports[`NavBar component renders NavBar 1`] = `
   />
   <NavLink
     activeIcon="/path/image"
+    containerId="AboutContainer"
     icon="/path/image"
     key="1"
     to="About"
