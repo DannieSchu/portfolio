@@ -1,9 +1,9 @@
 import React from 'react';
 import Typist from 'react-typist';
+import Arrow from '../Nav/Arrow';
 import selfPortrait from '../../assets/images/self-portrait.png';
 import styles from './About.css';
 import typeStyle from '../../styles/type.css';
-import Arrow from '../Nav/Arrow';
 
 const About = () => (
   <section name="About" className={styles.About}>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Arrow from '../Nav/Arrow';
 import inkBlot from '../../assets/images/splotch.png';
 import roundInkBlot from '../../assets/images/round-splotch.png';
 import typeStyle from '../../styles/type.css';
@@ -33,6 +34,7 @@ const Strengths = () => {
           <p className={`${styles.details} ${typeStyle.body}`}>Some stuff here...fneonwoegwep jopjv<br /> fiewohgwe0fhiosbhsoens</p>
         </div>
       </div>
+      <Arrow element="Tech" container="AboutContainer" />
     </section>
   );
 };

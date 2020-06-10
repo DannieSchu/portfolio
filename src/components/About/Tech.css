@@ -10,9 +10,15 @@
 
   dl.definitionList {
     width: 40%;
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-flow: column wrap;
+  }
+
+  img {
+   position: relative;
+   left: 47%;
+   margin-bottom: 5%;
   }
   
   @media only screen and (max-width: 768px) {
