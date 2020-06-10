@@ -7,7 +7,7 @@ import projectsActiveIcon from '../../assets/icons/projects-active.png';
 import contactIcon from '../../assets/icons/contact.png';
 import contactActiveIcon from '../../assets/icons/contact-active.png';
 
-export const elements = [
+export const navIconsArr = [
   {
     to: 'Home',
     icon: homeIcon,
@@ -16,7 +16,8 @@ export const elements = [
   {
     to: 'About',
     icon: aboutIcon,
-    activeIcon: aboutActiveIcon
+    activeIcon: aboutActiveIcon,
+    containerId: 'AboutContainer'
   },
   {
     to: 'Projects',
