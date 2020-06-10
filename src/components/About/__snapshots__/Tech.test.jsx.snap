@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tech component renders Tech 1`] = `
+<section
+  className="Tech"
+>
+  <h2
+    className="pageHeading"
+  >
+    Tech Stack
+  </h2>
+  <section
+    className="techList"
+  >
+    <dl
+      className="definitionList"
+    >
+      <TechItem
+        definitions={
+          Array [
+            "JavaScript",
+            "HTML",
+            "CSS",
+          ]
+        }
+        key="Languages"
+        title="Languages"
+      />
+      <TechItem
+        definitions={
+          Array [
+            "React",
+            "Redux",
+            "Node",
+            "Express",
+          ]
+        }
+        key="Libraries & Frameworks"
+        title="Libraries & Frameworks"
+      />
+      <TechItem
+        definitions={
+          Array [
+            "MongoDB",
+            "PostresSQL",
+          ]
+        }
+        key="Databases"
+        title="Databases"
+      />
+      <TechItem
+        definitions={
+          Array [
+            "Jest",
+            "Enzyme",
+            "QUnit",
+          ]
+        }
+        key="Testing Suites"
+        title="Testing Suites"
+      />
+      <TechItem
+        definitions={
+          Array [
+            "Mongoose ODM",
+            "Travis CI",
+            "Postman",
+            "Compass",
+          ]
+        }
+        key="Dev Tools"
+        title="Dev Tools"
+      />
+    </dl>
+  </section>
+</section>
+`;
