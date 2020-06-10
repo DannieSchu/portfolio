@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Events, scroller } from 'react-scroll';
 import PropTypes from 'prop-types';
-import arrow from '../../assets/icons/arrow.png';
+import defaultArrow from '../../assets/icons/arrow.png';
+import defaultHoverArrow from '../../assets/icons/white-arrow-shadow.png';
 import styles from './Arrow.css';
 
-const Arrow = ({ element, container, icon }) => {
+const Arrow = ({ element, container, icon, shadowIcon }) => {
+  const [currIcon, setCurrIcon] = useState(icon || defaultArrow);
+
   const scrollTo = element => {
     scroller.scrollTo(element, {
       duration: 800,
@@ -38,13 +41,20 @@ const Arrow = ({ element, container, icon }) => {
       }));
   };
 
-  return <img src={icon || arrow} alt="arrow" onClick={container ? () => scrollToWithContainer(element, container) : () => scrollTo(element)} className={styles.Arrow} />;
+  return <img 
+    src={currIcon} 
+    alt="arrow" 
+    onClick={container ? () => scrollToWithContainer(element, container) : () => scrollTo(element)} 
+    onMouseEnter={() => setCurrIcon(shadowIcon || defaultHoverArrow)} 
+    onMouseLeave={() => setCurrIcon(icon || defaultArrow)} 
+    className={styles.Arrow} />;
 };
 
 Arrow.propTypes = {
   element: PropTypes.string.isRequired,
   container: PropTypes.string,
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  shadowIcon: PropTypes.string
 };
 
 export default Arrow;
