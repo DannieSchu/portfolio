@@ -1,0 +1,9 @@
+.Arrow {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
