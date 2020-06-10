@@ -3,6 +3,7 @@
 exports[`Tech component renders Tech 1`] = `
 <section
   className="Tech"
+  name="Tech"
 >
   <h2
     className="pageHeading"
@@ -73,5 +74,8 @@ exports[`Tech component renders Tech 1`] = `
       />
     </dl>
   </section>
+  <Arrow
+    element="Projects"
+  />
 </section>
 `;
