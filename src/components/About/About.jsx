@@ -3,10 +3,11 @@ import Typist from 'react-typist';
 import selfPortrait from '../../assets/images/self-portrait.png';
 import styles from './About.css';
 import typeStyle from '../../styles/type.css';
+import Arrow from '../Nav/Arrow';
 
 const About = () => (
-  <section id="About" className={styles.About}>
-    <img src={selfPortrait} alt="Dannie Schumaker" />
+  <section name="About" className={styles.About}>
+    <img src={selfPortrait} alt="Dannie Schumaker" className={styles.portrait} />
     <section>
       <h3 className={typeStyle.subheading}>Full-stack software developer who makes <i>clunky</i> code <i>beautiful</i>. </h3>
       <Typist avgTypingDelay={110} cursor={{ show: false }} startDelay={5000}>
@@ -17,6 +18,7 @@ const About = () => (
         <p>and a passion for finding elegant solutions to complex problems.</p>
       </Typist>
     </section>
+    <Arrow element="Strengths" container="AboutContainer" />
   </section>
 );
 

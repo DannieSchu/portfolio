@@ -6,7 +6,7 @@ import styles from './Strengths.css';
   
 const Strengths = () => {
   return (
-    <section className={styles.Strengths}>
+    <section name='Strengths' className={styles.Strengths}>
       <h2 className={typeStyle.pageHeading}>Strengths</h2>
       <div className={`${styles.element} ${styles.learner}`}>
         <img src={roundInkBlot} alt="Ink Blot" />
