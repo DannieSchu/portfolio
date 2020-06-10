@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import arrow from '../../assets/icons/arrow.png';
 import styles from './Arrow.css';
 
-const Arrow = ({ element, container }) => {
+const Arrow = ({ element, container, icon }) => {
   const scrollTo = element => {
     scroller.scrollTo(element, {
       duration: 800,
@@ -38,12 +38,13 @@ const Arrow = ({ element, container }) => {
       }));
   };
 
-  return <img src={arrow} alt="arrow" onClick={container ? () => scrollToWithContainer(element, container) : () => scrollTo(element)} className={styles.Arrow} />;
+  return <img src={icon || arrow} alt="arrow" onClick={container ? () => scrollToWithContainer(element, container) : () => scrollTo(element)} className={styles.Arrow} />;
 };
 
 Arrow.propTypes = {
   element: PropTypes.string.isRequired,
-  container: PropTypes.string
+  container: PropTypes.string,
+  icon: PropTypes.string
 };
 
 export default Arrow;
