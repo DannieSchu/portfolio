@@ -39,10 +39,10 @@
         }
       }
 
-    img {
+    img.portrait {
       max-height: 14rem;
-      margin-top: 18%;
-      margin-bottom: 10%;
+      margin-top: 15%;
+      margin-bottom: 8%;
     }
   }
 }
