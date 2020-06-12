@@ -1,11 +1,15 @@
 .ProjectHover {
+  a:hover {
+    color: var(--translucent-charcoal)
+  }
+
  .spaceBetween {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   height: 4rem;
- }
- 
+}
+
  .centered {
   display: flex;
   justify-content: center;
@@ -13,6 +17,10 @@
  }
 
  .site {
-   color: var(--charcoal)
- }
+   color: var(--translucent-charcoal);
+
+   &:hover {
+    color: var(--white)
+    }
+  }
 }

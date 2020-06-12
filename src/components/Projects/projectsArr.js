@@ -9,7 +9,7 @@ import crossPondNewsroom from '../../assets/projects/cross-pond-newsroom/us-stor
 export const projectsArr = [
   {
     title: 'Alcherithm',
-    stack: ['React', 'Node', 'Express', 'Jest', 'MongoDB'],
+    stack: ['React', 'Node', 'Express', 'Jest', 'MongoDB', 'Mongoose'],
     year: 2020,
     description: 'A learning platform that helps budding developers navigate code challenges.',
     githubFE: 'https://github.com/DannieSchu/alcherithm-fe',
@@ -29,7 +29,7 @@ export const projectsArr = [
   },
   {
     title: 'Social Distance Ping',
-    stack: ['MongoDB', 'Node', 'Express', 'Jest', 'Twilio', 'Puppeteer'],
+    stack: ['MongoDB', 'Mongoose', 'Node', 'Express', 'Jest', 'Twilio', 'Puppeteer'],
     year: 2020,
     description: 'Up-to-date COVID-19 stats scraped from a dynamic website and sent to your phone on-demand or in a daily digest text.',
     githubFE: null,
@@ -49,7 +49,7 @@ export const projectsArr = [
   },
   {
     title: 'Ripe Banana',
-    stack: ['Node', 'Express', 'MongoDB', 'Jest'],
+    stack: ['Node', 'Express', 'MongoDB', 'Mongoose', 'Jest'],
     year: 2020,
     description: 'A RESTful API that navigates complex document relationships to return films, movie studios, actors, reviews and reviewers.',
     githubFE: null,
