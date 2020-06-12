@@ -1,0 +1,34 @@
+.Project {
+  width: 50%;
+  min-width: 30rem;
+  flex: 0 0 auto;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  border-right: 1px solid var(--charcoal);
+
+  img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: larger;
+  }
+
+  .heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
