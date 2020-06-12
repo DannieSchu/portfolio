@@ -1,3 +1,25 @@
 .Projects {
   height: 100vh;
+  background-color: var(--gold);
+  
+  .arrow {
+    width: 100vw;
+    position: relative;
+   }
+
+  .wrapper {
+    width: 80%;
+    position: relative;
+    top: 10%;
+    left: 12%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /*cursor: grab;*/
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
