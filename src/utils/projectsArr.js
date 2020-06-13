@@ -1,10 +1,10 @@
-import apiClient from '../../assets/projects/api-client/api-client.png';
-import alcherithm from '../../assets/projects/alcherithm/test.png';
-import sewOrganized from '../../assets/projects/sew-organized/splash.png';
-import socialDistancePing from '../../assets/projects/social-distance-ping/social-distance-ping.jpeg';
-import ripeBanana from '../../assets/projects/ripe-banana/get-film-by-id.png';
-import artistFinder from '../../assets/projects/artist-finder/splash-empty-input.png';
-import crossPondNewsroom from '../../assets/projects/cross-pond-newsroom/us-stories.png';
+import apiClient from '../assets/projects/api-client/api-client.png';
+import socialDistancePing from '../assets/projects/social-distance-ping/social-distance-ping.jpeg';
+import { alcherithmImages } from './alcherithmImages';
+import { artistFinderImages } from './artistFinderImages';
+import { sewOrganizedImages } from './sewOrganizedImages';
+import { ripeBananaImages } from './ripeBananaImages';
+import { crossPondNewsroomImages } from './crossPondNewsroomImages';
 
 export const projectsArr = [
   {
@@ -15,7 +15,7 @@ export const projectsArr = [
     githubFE: 'https://github.com/DannieSchu/alcherithm-fe',
     githubBE: 'https://github.com/Alcherithm/alcherithm-be',
     site: 'https://alcherithm.netlify.app/',
-    image: alcherithm
+    images: alcherithmImages
   },
   {
     title: 'Sew Organized',
@@ -25,7 +25,7 @@ export const projectsArr = [
     githubFE: 'https://github.com/Sew-Organized/sew-organized-react',
     githubBE: 'https://github.com/Sew-Organized/sew-organized-server',    
     site: 'https://sew-organized.herokuapp.com/',
-    image: sewOrganized
+    images: sewOrganizedImages
   },
   {
     title: 'Social Distance Ping',
@@ -35,7 +35,7 @@ export const projectsArr = [
     githubFE: null,
     githubBE: 'https://github.com/Alchemy-Covid-19/covid-19-statbot',
     site: null,
-    image: socialDistancePing
+    images: [socialDistancePing]
   },
   {
     title: 'API Client',
@@ -45,7 +45,7 @@ export const projectsArr = [
     githubFE: 'link',
     githubBE: null,
     site: null,
-    image: apiClient
+    images: [apiClient]
   },
   {
     title: 'Ripe Banana',
@@ -55,7 +55,7 @@ export const projectsArr = [
     githubFE: null,
     githubBE: 'https://github.com/DannieSchu/ripe-banana',
     site: null,
-    image: ripeBanana
+    images: ripeBananaImages
   },
   {
     title: 'Artist Finder',
@@ -65,7 +65,7 @@ export const projectsArr = [
     githubFE: 'https://github.com/DannieSchu/artist-finder',
     githubBE: null,
     site: null,
-    image: artistFinder
+    images: artistFinderImages
   },
   {
     title: 'Cross-Pond Newsroom',
@@ -75,6 +75,6 @@ export const projectsArr = [
     githubFE: 'https://github.com/DannieSchu/themeable-list',
     githubBE: null,
     site: null,
-    image: crossPondNewsroom
+    images: crossPondNewsroomImages
   }
 ];
