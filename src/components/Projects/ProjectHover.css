@@ -1,6 +1,10 @@
 .ProjectHover {
-  a:hover {
-    color: var(--translucent-charcoal)
+  a {
+    cursor: url('../../assets/icons/blue-cursor.png'), pointer;
+
+    &:hover {
+      color: var(--translucent-charcoal);
+    }
   }
 
  .spaceBetween {
@@ -18,6 +22,7 @@
 
  .site {
    color: var(--translucent-charcoal);
+   cursor: url('../../assets/icons/blue-cursor.png'), pointer;
 
    &:hover {
     color: var(--white)
