@@ -3,7 +3,7 @@ import Project from './Project';
 import Arrow from '../Nav/Arrow';
 import styles from './Projects.css';
 import typeStyle from '../../styles/type.css';
-import { projectsArr } from './projectsArr';
+import { projectsArr } from '../../utils/projectsArr';
 
 const Projects = () => {
   const projectElements = projectsArr.map(project => <Project key={project.title} {...project} />);

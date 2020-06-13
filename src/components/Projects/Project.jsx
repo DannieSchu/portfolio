@@ -12,14 +12,14 @@ const Project = ({
   githubFE, 
   githubBE, 
   site, 
-  image 
+  images 
 }) => {
   const [active, setActive] = useState(false);
   const stackList = stack.map(techItem => `${techItem}`).join(' | ');
 
   return (
     <section className={styles.Project} onMouseOver={() => setActive(true)} onMouseLeave={() => setActive(false)}>
-      <img src={image} />
+      <img src={images[0]} />
       <article>
         <div className={styles.heading}>
           <a href={site} target="blank"><h3 className={typeStyles.subheading}>{title}</h3></a>
@@ -40,7 +40,7 @@ Project.propTypes = {
   githubFE: PropTypes.string,
   githubBE: PropTypes.string,
   site: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 };
 
 export default Project;
