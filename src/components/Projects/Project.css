@@ -1,5 +1,5 @@
 .Project {
-  width: 50%;
+  width: 20%;
   min-width: 25rem;
   flex: 0 0 auto;
   padding-right: 4rem;
@@ -44,6 +44,11 @@
 
     a {
       text-decoration: none;
+      cursor: url('../../assets/icons/blue-cursor.png'), pointer;
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    min-width: 18rem;
   }
 }
