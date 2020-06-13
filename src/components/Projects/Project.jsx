@@ -20,7 +20,7 @@ const Project = ({
   return (
     <section className={styles.Project} onMouseOver={() => setActive(true)} onMouseLeave={() => setActive(false)}>
       <img src={images[0]} />
-      <article>
+      <article className={styles.text}>
         <div className={styles.heading}>
           <a href={site} target="blank"><h3 className={typeStyles.subheading}>{title}</h3></a>
           <h3 className={typeStyles.subheading}>{year}</h3>
