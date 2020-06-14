@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Project.css';
 import typeStyles from '../../styles/type.css';
@@ -14,20 +14,21 @@ const Project = ({
   site, 
   images 
 }) => {
-  const [active, setActive] = useState(false);
   const stackList = stack.map(techItem => `${techItem}`).join(' | ');
 
   return (
-    <section className={styles.Project} onMouseOver={() => setActive(true)} onMouseLeave={() => setActive(false)}>
+    <section className={styles.Project}>
       <img src={images[0]} />
-      <article className={styles.text}>
-        <div className={styles.heading}>
-          <a href={site} target="blank"><h3 className={typeStyles.subheading}>{title}</h3></a>
-          <h3 className={typeStyles.subheading}>{year}</h3>
-        </div>
-        <h4 className={typeStyles.allCaps}>{stackList}</h4>
-        {active && <ProjectHover description={description} githubFE={githubFE} githubBE={githubBE} site={site} />}
-      </article>
+      <section className={styles.wrapper}>
+        <article className={styles.text}>
+          <div className={styles.heading}>
+            <a href={site} target="blank"><h3 className={typeStyles.subheading}>{title}</h3></a>
+            <h3 className={typeStyles.subheading}>{year}</h3>
+          </div>
+          <h4 className={typeStyles.allCaps}>{stackList}</h4>
+          <ProjectHover description={description} githubFE={githubFE} githubBE={githubBE} site={site} />
+        </article>
+      </section>
     </section>
   );
 };
