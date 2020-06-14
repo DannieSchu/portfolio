@@ -60,7 +60,7 @@
 
     a {
       text-decoration: none;
-      cursor: url('../../assets/icons/blue-cursor.png'), pointer;
+      cursor: url('../../assets/icons/learn-more-cursor.png') 3 15, pointer;
     }
   }
 
