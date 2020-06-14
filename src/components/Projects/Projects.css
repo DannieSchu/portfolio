@@ -5,11 +5,6 @@
   overflow: hidden;
   background-color: var(--gold);
 
-  .arrow {
-    width: 100vw;
-    position: relative;
-   }
-
   .wrapper {
     width: 80%;
     height: 100%;
@@ -17,9 +12,6 @@
     top: 10%;
     left: 12%;
     
-    /*display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;*/
     overflow-y: hidden;
     overflow-x: scroll; 
     cursor: url('../../assets/icons/drag-cursor.png'), grab;

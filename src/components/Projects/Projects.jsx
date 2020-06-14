@@ -8,23 +8,18 @@ import typeStyle from '../../styles/type.css';
 
 const Projects = () => {
   const projectElements = projectsArr.map(project => <Project key={project.title} {...project} />);
-
   const scrollWrapperRef = useRef();
-  const { isDragging, active } = useScrollBox(scrollWrapperRef);
+  const { isDragging } = useScrollBox(scrollWrapperRef);
 
   return (
     <section name="Projects" className={styles.Projects}>
       <h2 className={typeStyle.pageHeading}>Projects</h2>
       <section className={styles.wrapper} ref={scrollWrapperRef}>
-        <section style={{ pointerEvents: isDragging ? 'none' : undefined, 
-          // cursor: active ? 'grab' : 'grabbing' 
-        }} className={styles.container}>
+        <section style={{ pointerEvents: isDragging ? 'none' : undefined, }} className={styles.container}>
           {projectElements}
         </section>
       </section>
-      <div className={styles.arrow}>
-        <Arrow element="Contact" />
-      </div>
+      <Arrow element="Contact" />
     </section>
   );
 };
