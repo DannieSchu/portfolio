@@ -14,7 +14,7 @@
     
     overflow-y: hidden;
     overflow-x: scroll; 
-    cursor: url('../../assets/icons/drag-cursor.png'), grab;
+    cursor: url('../../assets/icons/drag-cursor.png') 25 15, grab;
 
     &::-webkit-scrollbar {
       display: none;
