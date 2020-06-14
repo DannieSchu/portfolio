@@ -1,0 +1,46 @@
+.ProjectHover {
+  max-width: 36rem;
+  width: 100%;
+  height: calc(var(--project-overview-height)*0.5);
+  margin-top: 0;
+  
+  position: absolute;
+  left: 0;
+  bottom: -3rem;
+  opacity: 0;
+  
+  transform: translateY(calc(var(--project-overview-height)*-0.5));
+  transition-delay: 500ms, 250ms;
+  transition-property: opacity, transform;
+  transition: transform .2s ease-in-out, opacity .8s ease-in-out;
+  
+  a {
+    cursor: url('../../assets/icons/blue-cursor.png'), pointer;
+
+    &:hover {
+      color: var(--translucent-charcoal);
+    }
+  }
+
+ .spaceBetween {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+ .centered {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+ }
+
+ .site {
+   color: var(--translucent-charcoal);
+   cursor: url('../../assets/icons/blue-cursor.png'), pointer;
+
+   &:hover {
+    color: var(--white)
+    }
+  }
+}

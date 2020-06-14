@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Events, scroller } from 'react-scroll';
 import PropTypes from 'prop-types';
 import defaultArrow from '../../assets/icons/arrow.png';
 import defaultHoverArrow from '../../assets/icons/white-arrow-shadow.png';

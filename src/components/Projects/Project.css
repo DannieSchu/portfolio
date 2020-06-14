@@ -1,0 +1,71 @@
+.Project {
+  width: 20%;
+  min-width: 25rem;
+  height: calc(var(--project-overview-height) * 3);
+  position: relative;
+  flex: 0 0 auto;
+  
+  border-right: 1px solid var(--translucent-charcoal);
+  padding-right: 4rem;
+  padding-left: 4rem;
+
+  img {
+    width: 100%;
+  }
+
+  &:hover {
+    .wrapper {
+      transform: translateY(0);
+    }
+
+    section {
+      opacity: 1;
+    }
+  }
+
+  .wrapper {
+    height: calc(var(--project-overview-height) * 2);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2rem 4rem;
+    overflow: hidden;
+    transform: translateY(calc(var(--project-overview-height)));
+    transition: transform .6s ease-in-out;
+  }
+
+  .text {
+    height: 100%;
+    position: relative;
+    padding-top: 1rem;
+    background-color: var(--gold);
+  }
+
+  h4 {
+    text-align: center;
+    font-size: larger;
+  }
+
+  .heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: url('../../assets/icons/blue-cursor.png'), pointer;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    min-width: 18rem;
+    height: calc(var(--project-overview-height) * 2.3);
+  }
+}
