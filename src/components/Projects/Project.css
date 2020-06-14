@@ -1,28 +1,44 @@
 .Project {
   width: 20%;
   min-width: 25rem;
+  height: calc(var(--project-overview-height) * 3);
+  position: relative;
   flex: 0 0 auto;
+  
+  border-right: 1px solid var(--translucent-charcoal);
   padding-right: 4rem;
   padding-left: 4rem;
-  border-right: 1px solid var(--translucent-charcoal);
 
   img {
     width: 100%;
-    margin-bottom: 1.5rem;
   }
 
   &:hover {
-    .text {
-      top: -6rem;
+    .wrapper {
+      transform: translateY(0);
+    }
+
+    section {
+      opacity: 1;
     }
   }
 
+  .wrapper {
+    height: calc(var(--project-overview-height) * 2);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2rem 4rem;
+    overflow: hidden;
+    transform: translateY(calc(var(--project-overview-height)));
+    transition: transform .6s ease-in-out;
+  }
+
   .text {
+    height: 100%;
     position: relative;
-    top: 0px;
     padding-top: 1rem;
-    transition: top ease 0.8s;
-    z-index: 1;
     background-color: var(--gold);
   }
 
@@ -50,5 +66,6 @@
 
   @media only screen and (max-width: 768px) {
     min-width: 18rem;
+    height: calc(var(--project-overview-height) * 2.3);
   }
 }

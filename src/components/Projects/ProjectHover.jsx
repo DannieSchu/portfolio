@@ -4,7 +4,7 @@ import typeStyles from '../../styles/type.css';
 import styles from './ProjectHover.css';
 
 const ProjectHover = ({ description, githubBE, githubFE, site }) => (
-  <div className={styles.ProjectHover}>
+  <section className={styles.ProjectHover}>
     <p className={typeStyles.body}>{description}</p>
     <div className={githubFE && githubBE ? styles.spaceBetween : styles.centered}>
       {githubFE && <a href={githubFE} target="blank" className={typeStyles.body}>Front-End Repo</a>}
@@ -13,7 +13,7 @@ const ProjectHover = ({ description, githubBE, githubFE, site }) => (
     {site && <div className={styles.centered}>
       <a href={site} target="blank" className={`${styles.site} ${typeStyles.body}`}>Visit the Site</a>
     </div>}
-  </div>
+  </section>
 );
 
 ProjectHover.propTypes = {
