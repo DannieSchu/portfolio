@@ -6,5 +6,6 @@ exports[`App component renders App 1`] = `
   <Home />
   <AboutContainer />
   <Projects />
+  <Contact />
 </Fragment>
 `;

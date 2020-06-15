@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactMethod component renders ContactMethod 1`] = `
+<a
+  className="ContactMethod"
+  href="https://twitter.com/DannieSchumaker"
+>
+  <img
+    alt="dannieschumaker"
+    src="../assets/social-media/twitter.png"
+  />
+  <p
+    className="body"
+  >
+    dannieschumaker
+  </p>
+</a>
+`;

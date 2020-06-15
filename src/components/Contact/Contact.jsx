@@ -6,7 +6,6 @@ import styles from './Contact.css';
 import typeStyle from '../../styles/type.css';
 import ContactMethod from './ContactMethod';
 
-
 const Contact = () => {
   const contactElements = contactArr.map(item => <ContactMethod key={item.link} {...item} />);
 
