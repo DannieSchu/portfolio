@@ -8,20 +8,23 @@
     width: 2.5rem;
     height: 2.5rem;
     margin-right: 2rem;
-    transition: all .2s ease-in-out;
-    
-    &:hover {
+    transition: transform .2s ease-in-out;
+  }
+  
+  &:hover {
+    img, p {
       transform: scale(1.1);
     }
   }
-
+  
   p {
     font-size: 1.6rem;
     position: relative;
     bottom: 1rem;
+    transition: color .1s ease-out;
 
     &:hover {
-      color: var(--gold)
+      color: var(--gold);
     }
   }
 

@@ -10,6 +10,7 @@
     top: 12%;
     right: 8%;
     margin: 2rem;
+    z-index: 1;
     
     a {
       padding: 2rem 6rem;
@@ -18,12 +19,14 @@
       font-size: 1.8rem;
       text-align: center;
       text-decoration: none;
+      transition: color .1s ease-out, border .1s ease-out;
 
       &:hover {
         color: var(--charcoal);
         border: 5px solid var(--charcoal);
       }
     }
+
     @media only screen and (max-width: 768px) {
     text-align: center;
     right: 0;
@@ -33,29 +36,27 @@
 
   .contactInfo {
     position: relative;
-    top: 25%;
+    top: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
 
     img.inkBlot {
       height: 100%;
       width: 100%;
     }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-
     .contactContainer {
       position: absolute;
-      width: 60%; 
-      z-index: 1;
+      max-width: 20rem;
     }
 
     @media only screen and (min-width: 768px) {
       left: 14%;
-      top: -10%;
+      top: 0;
       width: 60%;
-      min-width: 35rem;
+      min-width: 45rem;
     }
   }
 }
