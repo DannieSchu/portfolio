@@ -47,15 +47,15 @@
 
   @media only screen and (min-width: 768px) {  
     .learner {
-      transform: translate(25%, -30%);
+      transform: translate(30%, -30%);
     }
     
     .quality {
-      transform: translate(82%, -50%);
+      transform: translate(82%, -35%);
     }
     
     .problemSolver {
-      transform: translate(180%, -190%);
+      transform: translate(180%, -140%);
     }  
   }
 
