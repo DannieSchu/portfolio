@@ -12,7 +12,7 @@
     ],
     "moduleNameMapper": {
       "\\.(css)$": "identity-obj-proxy",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+      "\\.(pdf|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     }
   },
   "scripts": {
@@ -25,10 +25,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.18.6",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "emotion": "^10.0.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scroll": "^1.7.16",
-    "react-typist": "^2.0.5"
+    "react-slick": "^0.26.1",
+    "react-typist": "^2.0.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

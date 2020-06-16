@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact component renders Contact 1`] = `
+<section
+  className="Contact"
+  name="Contact"
+>
+  <h2
+    className="pageHeading"
+  >
+    Contact
+  </h2>
+  <aside
+    className="resume"
+  >
+    <a
+      className="body"
+      href="/path/image"
+      target="blank"
+    >
+      Resume
+    </a>
+  </aside>
+  <section
+    className="contactInfo"
+  >
+    <img
+      alt="Ink Blot"
+      className="inkBlot"
+      src="/path/image"
+    />
+    <div
+      className="contactContainer"
+    >
+      <ContactMethod
+        image="/path/image"
+        key="https://twitter.com/DannieSchumaker"
+        link="https://twitter.com/DannieSchumaker"
+        text="dannieschumaker"
+      />
+      <ContactMethod
+        image="/path/image"
+        key="https://www.linkedin.com/in/dannieschumaker/"
+        link="https://www.linkedin.com/in/dannieschumaker/"
+        text="/in/dannieschumaker"
+      />
+      <ContactMethod
+        image="/path/image"
+        key="https://github.com/DannieSchu"
+        link="https://github.com/DannieSchu"
+        text="/DannieSchu"
+      />
+      <ContactMethod
+        image="/path/image"
+        key="mailto: draeschumaker@gmail.com"
+        link="mailto: draeschumaker@gmail.com"
+        text="draeschumaker@gmail.com"
+      />
+    </div>
+  </section>
+</section>
+`;
