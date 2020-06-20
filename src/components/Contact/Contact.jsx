@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactArr } from '../../utils/contactArr';
+import { contactArr } from '../../data/contactArr';
 import resume from '../../assets/Dannie-Schumaker-Resume.pdf';
 import inkBlot from '../../assets/images/splotch4.png';
 import styles from './Contact.css';

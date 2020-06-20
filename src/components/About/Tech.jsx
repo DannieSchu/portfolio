@@ -1,7 +1,7 @@
 import React from 'react';
 import TechItem from './TechItem';
 import Arrow from '../Nav/Arrow';
-import { techArr } from './techArr';
+import { techArr } from '../../data/techArr';
 import styles from './Tech.css';
 import typeStyle from '../../styles/type.css';
 

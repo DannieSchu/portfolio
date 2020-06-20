@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import Project from './Project';
 import Arrow from '../Nav/Arrow';
 import useScrollBox from '../../hooks/getScrollBox';
-import { projectsArr } from '../../utils/projectsArr';
+import { projectsArr } from '../../data/projectsArr';
 import styles from './Projects.css';
 import typeStyle from '../../styles/type.css';
 
