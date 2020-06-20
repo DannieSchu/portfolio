@@ -36,11 +36,11 @@ const Project = ({
 Project.propTypes = {
   title: PropTypes.string.isRequired,
   stack: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  year: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   githubFE: PropTypes.string,
   githubBE: PropTypes.string,
-  site: PropTypes.string.isRequired,
+  site: PropTypes.string,
   images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 };
 

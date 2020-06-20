@@ -1,4 +1,5 @@
 import React from 'react';
+import PageHeading from '../PageHeading/PageHeading';
 import Arrow from '../Nav/Arrow';
 import inkBlot1 from '../../assets/images/splotch1.png';
 import inkBlot2 from '../../assets/images/splotch2.png';
@@ -9,7 +10,7 @@ import styles from './Strengths.css';
 const Strengths = () => {
   return (
     <section name='Strengths' className={styles.Strengths}>
-      <h2 className={typeStyle.pageHeading}>Strengths</h2>
+      <PageHeading content="Strengths" />
       <div className={`${styles.element} ${styles.learner}`}>
         <img src={inkBlot3} alt="Ink Blot" />
         <div className={styles.content}>
