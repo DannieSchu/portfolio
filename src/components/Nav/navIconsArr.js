@@ -16,8 +16,7 @@ export const navIconsArr = [
   {
     to: 'About',
     icon: aboutIcon,
-    activeIcon: aboutActiveIcon,
-    containerId: 'AboutContainer'
+    activeIcon: aboutActiveIcon
   },
   {
     to: 'Projects',
