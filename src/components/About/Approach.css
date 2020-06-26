@@ -1,4 +1,4 @@
-.Strengths {
+.Approach {
   position: relative;
   height: 100vh;
 
@@ -27,6 +27,11 @@
       
       .details {
         display: none;
+
+      a {
+          color: var(--salmon);
+          text-decoration: none;
+        }
       }
     }
 
@@ -46,27 +51,38 @@
   }
 
   @media only screen and (min-width: 768px) {  
-    .learner {
+    .design {
       transform: translate(30%, -30%);
     }
     
-    .quality {
+    .learning {
       transform: translate(82%, -35%);
     }
     
-    .problemSolver {
+    .process {
       transform: translate(180%, -140%);
     }  
   }
 
   @media only screen and (max-width: 768px) {
     height: 150vh;  
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .content {
-      width: 13rem;
+     /* width: 40%;*/
+      height: 6rem;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: scroll;
+
+      h3, p {
+        width: 100%;
+      }
     }
   }
 }

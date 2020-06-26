@@ -18,7 +18,7 @@ const About = () => (
         <p>and a passion for finding elegant solutions to complex problems.</p>
       </Typist>
     </section>
-    <Arrow element="Strengths" container="AboutContainer" />
+    <Arrow element="Approach" container="AboutContainer" />
   </section>
 );
 
