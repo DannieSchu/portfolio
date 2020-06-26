@@ -5,11 +5,9 @@ exports[`Contact component renders Contact 1`] = `
   className="Contact"
   name="Contact"
 >
-  <h2
-    className="pageHeading"
-  >
-    Contact
-  </h2>
+  <PageHeading
+    content="Contact"
+  />
   <aside
     className="resume"
   >

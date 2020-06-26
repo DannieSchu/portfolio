@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ProjectHover from './ProjectHover';
+import StackList from '../StackList/StackList';
 import styles from './Project.css';
 import typeStyles from '../../styles/type.css';
-import ProjectHover from './ProjectHover';
 
 const Project = ({ 
   title, 
@@ -14,7 +15,6 @@ const Project = ({
   site, 
   images 
 }) => {
-  const stackList = stack.map(techItem => `${techItem}`).join(' | ');
 
   return (
     <section className={styles.Project}>
@@ -25,7 +25,7 @@ const Project = ({
             <a href={site} target="blank"><h3 className={typeStyles.subheading}>{title}</h3></a>
             <h3 className={typeStyles.subheading}>{year}</h3>
           </div>
-          <h4 className={typeStyles.allCaps}>{stackList}</h4>
+          <StackList stack={stack} />
           <ProjectHover description={description} githubFE={githubFE} githubBE={githubBE} site={site} />
         </article>
       </section>
@@ -36,11 +36,11 @@ const Project = ({
 Project.propTypes = {
   title: PropTypes.string.isRequired,
   stack: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  year: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   githubFE: PropTypes.string,
   githubBE: PropTypes.string,
-  site: PropTypes.string.isRequired,
+  site: PropTypes.string,
   images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 };
 

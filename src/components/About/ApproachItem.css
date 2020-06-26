@@ -1,0 +1,62 @@
+.ApproachItem {
+  .element {
+    width: 35%;
+    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      transition: all .5s ease-in-out;
+    }
+    
+    .content {
+      position: absolute;
+      width: 50%;
+      min-width: 13rem;
+
+      h3 {
+        color: var(--salmon);
+        text-align: center;
+      }
+      
+      .details {
+        display: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        width: 13rem;
+      }
+    }
+
+    &:hover {
+      h3 {
+        display: none;
+      }
+  
+      .details {
+        display: block;
+      }
+
+      img {
+        transform: scale(1.1);
+      }
+    } 
+  }
+
+  @media only screen and (min-width: 768px) {  
+    .design {
+      transform: translate(30%, -30%);
+    }
+    
+    .learning {
+      transform: translate(82%, -35%);
+    }
+    
+    .process {
+      transform: translate(180%, -140%);
+    }  
+  }
+}

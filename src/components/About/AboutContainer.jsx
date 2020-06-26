@@ -1,13 +1,13 @@
 import React from 'react';
 import About from './About';
-import Strengths from './Strengths';
+import Approach from './Approach';
 import Tech from './Tech';
 import styles from './AboutContainer.css';
 
 const AboutContainer = () => (
   <section id="AboutContainer" className={styles.AboutContainer}>
     <About />
-    <Strengths />
+    <Approach />
     <Tech />
   </section>
 );

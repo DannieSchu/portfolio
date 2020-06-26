@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
-import { navIconsArr } from './navIconsArr';
+import { navIconsArr } from '../../data/navIconsArr';
 import styles from './NavBar.css';
 
 const NavBar = () => {

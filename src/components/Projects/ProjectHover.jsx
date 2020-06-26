@@ -20,7 +20,7 @@ ProjectHover.propTypes = {
   description: PropTypes.string.isRequired,
   githubFE: PropTypes.string,
   githubBE: PropTypes.string,
-  site: PropTypes.string.isRequired,
+  site: PropTypes.string
 };
 
 export default ProjectHover;
