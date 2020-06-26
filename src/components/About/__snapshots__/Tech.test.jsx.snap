@@ -5,11 +5,9 @@ exports[`Tech component renders Tech 1`] = `
   className="Tech"
   name="Tech"
 >
-  <h2
-    className="pageHeading"
-  >
-    Tech Stack
-  </h2>
+  <PageHeading
+    content="Tech Stack"
+  />
   <section
     className="techList"
   >
@@ -31,23 +29,34 @@ exports[`Tech component renders Tech 1`] = `
         definitions={
           Array [
             "React",
+            "React Native",
             "Redux",
+            "PostCSS",
+          ]
+        }
+        key="Front End"
+        title="Front End"
+      />
+      <TechItem
+        definitions={
+          Array [
             "Node",
             "Express",
           ]
         }
-        key="Libraries & Frameworks"
-        title="Libraries & Frameworks"
+        key="Back End"
+        title="Back End"
       />
       <TechItem
         definitions={
           Array [
             "MongoDB",
+            "Mongoose",
             "PostresSQL",
           ]
         }
-        key="Databases"
-        title="Databases"
+        key="Database"
+        title="Database"
       />
       <TechItem
         definitions={
@@ -63,8 +72,8 @@ exports[`Tech component renders Tech 1`] = `
       <TechItem
         definitions={
           Array [
-            "Mongoose ODM",
             "Travis CI",
+            "Heroku",
             "Postman",
             "Compass",
           ]

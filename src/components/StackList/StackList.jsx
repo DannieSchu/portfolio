@@ -9,7 +9,7 @@ const StackList = ({ stack }) => {
 };
 
 StackList.propTypes = {
-  stack: PropTypes.arrayOf(PropTypes.string.is).isRequired
+  stack: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 };
 
 export default StackList;
