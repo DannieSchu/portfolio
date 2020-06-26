@@ -4,12 +4,16 @@ export const techArr = [
     definitions: ['JavaScript', 'HTML', 'CSS']
   },
   {
-    title: 'Libraries & Frameworks',
-    definitions: ['React', 'Redux', 'Node', 'Express']
+    title: 'Front End',
+    definitions: ['React', 'React Native', 'Redux', 'PostCSS']
   },
   {
-    title: 'Databases',
-    definitions: ['MongoDB', 'PostresSQL']
+    title: 'Back End',
+    definitions: ['Node', 'Express']
+  },
+  {
+    title: 'Database',
+    definitions: ['MongoDB', 'Mongoose', 'PostresSQL']
   },
   {
     title: 'Testing Suites',
@@ -17,6 +21,6 @@ export const techArr = [
   },
   {
     title: 'Dev Tools',
-    definitions: ['Mongoose ODM', 'Travis CI', 'Postman', 'Compass']
+    definitions: ['Travis CI', 'Heroku', 'Postman', 'Compass']
   }
 ];

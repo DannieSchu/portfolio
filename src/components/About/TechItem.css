@@ -1,7 +1,7 @@
 .TechItem {
   width: 100%;
   display: flex;
-  margin: 8%; 
+  margin: 6%; 
   
   dt.title {
     width: 40%;
