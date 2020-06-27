@@ -19,7 +19,7 @@ export const projectsArr = [
   },
   {
     title: 'Sew Organized',
-    stack: ['React', 'Node', 'Express', 'Jest', 'PostgresSQL'],
+    stack: ['React', 'Node', 'Express', 'Jest', 'PostgreSQL'],
     year: 2020,
     description: 'A personal catalogue of a user\'s embroidery thread stash that uses matching algorithms to compare DMC color numbers to HEX codes.',
     githubFE: 'https://github.com/Sew-Organized/sew-organized-react',

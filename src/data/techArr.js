@@ -13,7 +13,7 @@ export const techArr = [
   },
   {
     title: 'Database',
-    definitions: ['MongoDB', 'Mongoose', 'PostresSQL']
+    definitions: ['MongoDB', 'Mongoose', 'PostgreSQL']
   },
   {
     title: 'Testing Suites',
