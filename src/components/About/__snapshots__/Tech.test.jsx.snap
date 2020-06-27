@@ -52,7 +52,7 @@ exports[`Tech component renders Tech 1`] = `
           Array [
             "MongoDB",
             "Mongoose",
-            "PostresSQL",
+            "PostgreSQL",
           ]
         }
         key="Database"
