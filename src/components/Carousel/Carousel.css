@@ -1,0 +1,10 @@
+.Carousel {
+  width: 34rem;
+  height: 21rem;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    width: 18rem;
+    height: 11.4rem;
+  }
+}
