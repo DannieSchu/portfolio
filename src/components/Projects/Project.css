@@ -3,6 +3,7 @@
   min-width: 25rem;
   height: calc(var(--project-overview-height) * 3);
   position: relative;
+  left: -4rem;
   flex: 0 0 auto;
   
   border-right: 1px solid var(--translucent-charcoal);
