@@ -3,14 +3,16 @@
   width: 100%;
   height: 100vh;
   padding: 4rem;
-  background-color: var(--gold);
-  z-index: 11;
   display: flex;
   flex-flow: row wrap;
+  z-index: 11;
+  background-color: var(--gold);
   
   .container {
     width: 50%;
     min-width: 30rem;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,10 +20,30 @@
 
   .column {
     width: 83%;
+    height: 100%;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .textOverview {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .website {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
 
   .carousel {
-    margin-top: 4rem;
+    margin: 2rem;
   }
 
   @media only screen and (max-width: 768px) {
