@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import typeStyles from '../../styles/type.css';
+import GitHubLinks from '../GithubLinks/GitHubLinks';
 import styles from './ProjectHover.css';
+import typeStyles from '../../styles/type.css';
 
 const ProjectHover = ({ description, githubBE, githubFE, site }) => (
   <section className={styles.ProjectHover}>
     <p className={typeStyles.body}>{description}</p>
-    <div className={githubFE && githubBE ? styles.spaceBetween : styles.centered}>
-      {githubFE && <a href={githubFE} target="blank" className={typeStyles.body}>Front-End Repo</a>}
-      {githubBE && <a href={githubBE} target="blank" className={typeStyles.body}>Back-End Repo</a>}
-    </div>
+    <GitHubLinks githubBE={githubBE} githubFE={githubFE} />
     {site && <div className={styles.centered}>
       <a href={site} target="blank" className={`${styles.site} ${typeStyles.body}`}>Visit the Site</a>
     </div>}
