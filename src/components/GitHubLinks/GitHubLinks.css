@@ -1,0 +1,12 @@
+.spaceBetween {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+}
