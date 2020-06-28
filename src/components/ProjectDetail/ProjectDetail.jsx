@@ -28,16 +28,20 @@ const ProjectDetail = () => {
   return (
     <section>
       <section className={styles.ProjectDetail}>
-        <section className={styles.left}>
-          <h2 className={`${styles.heading} ${typeStyle.pageHeading}`}>{title}</h2>
-          <StackList stack={[currentProject.stack]} />
-          <TextBlock heading="Overview" content={currentProject.overview} />
-          <TextBlock heading="Process" content={currentProject.process} />
+        <section className={styles.container}>
+          <section className={styles.column}>
+            <h2 className={`${styles.heading} ${typeStyle.pageHeading}`}>{title}</h2>
+            <StackList stack={[currentProject.stack]} />
+            <TextBlock heading="Overview" content={currentProject.overview} />
+            <TextBlock heading="Process" content={currentProject.process} />
+          </section>
         </section>
-        <section className={styles.right}>
-          <Carousel {...carouselSettings}>
-            {currentImages.map((image, i) => <img key={i} src={image} />)}
-          </Carousel>
+        <section className={styles.container}>
+          <section className={styles.column}>
+            <Carousel {...carouselSettings}>
+              {currentImages.map((image, i) => <img key={i} src={image} />)}
+            </Carousel>
+          </section>
         </section>
       </section>
     </section>
