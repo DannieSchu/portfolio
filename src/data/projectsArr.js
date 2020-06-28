@@ -22,6 +22,8 @@ export const projectsArr = [
     stack: ['React', 'Node', 'Express', 'Jest', 'PostgreSQL'],
     year: 2020,
     description: 'A personal catalogue of a user\'s embroidery thread stash that uses matching algorithms to compare DMC color numbers to HEX codes.',
+    overview: 'A personal catalogue of a user\'s embroidery thread stash that uses matching algorithms to compare DMC color numbers to HEX codes.',
+    process: 'A personal catalogue of a user\'s embroidery thread stash that uses matching algorithms to compare DMC color numbers to HEX codes.',
     githubFE: 'https://github.com/Sew-Organized/sew-organized-react',
     githubBE: 'https://github.com/Sew-Organized/sew-organized-server',    
     site: 'https://sew-organized.herokuapp.com/',
