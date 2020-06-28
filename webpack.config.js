@@ -43,6 +43,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'style-loader'
@@ -65,6 +66,23 @@ module.exports = {
                 require('postcss-nested')(),
                 require('postcss-simple-vars')()
               ]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: false,
+              importLoaders: 1
             }
           }
         ]
