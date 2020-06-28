@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import Carousel from '../Carousel/Carousel';
 import TextBlock from '../TextBlock/TextBlock';
 import StackList from '../StackList/StackList';
 import { projectsArr } from '../../data/projectsArr';
-import Carousel from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
 import styles from './ProjectDetail.css';
 import typeStyle from '../../styles/type.css';
 
@@ -18,13 +17,6 @@ const ProjectDetail = () => {
     setCurrentImages(foundProject.images);
   }, []);
 
-  const carouselSettings = {
-    className: styles.carousel,
-    arrows: true,
-    autoPlay: true,
-    stopAutoPlayOnHover: true
-  };
-
   return (
     <section>
       <section className={styles.ProjectDetail}>
@@ -38,9 +30,7 @@ const ProjectDetail = () => {
         </section>
         <section className={styles.container}>
           <section className={styles.column}>
-            <Carousel {...carouselSettings}>
-              {currentImages.map((image, i) => <img key={i} src={image} />)}
-            </Carousel>
+            <Carousel images={currentImages} />
           </section>
         </section>
       </section>
