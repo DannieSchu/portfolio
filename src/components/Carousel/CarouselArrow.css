@@ -1,0 +1,11 @@
+.CarouselArrow {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 44%;
+
+  background: var(--taupe);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in 0.2s;
+}
