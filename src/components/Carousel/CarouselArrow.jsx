@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import leftArrow from '../../assets/icons/arrow.png';
-import rightArrow from '../../assets/icons/arrow.png';
-import leftHoverArrow from '../../assets/icons/white-arrow-shadow.png';
-import rightHoverArrow from '../../assets/icons/white-arrow-shadow.png';
+import leftArrow from '../../assets/icons/left-arrow-circle.png';
+import rightArrow from '../../assets/icons/right-arrow-circle.png';
+import leftHoverArrow from '../../assets/icons/left-arrow-salmon.png';
+import rightHoverArrow from '../../assets/icons/right-arrow-salmon.png';
 import styles from './CarouselArrow.css';
-// import { useGetScroll } from '../../hooks/getScroll';
 
 const CarouselArrow = ({ direction, onClick }) => {
-  // const icon = direction === 'left' ? leftArrow : rightArrow;
-  // const hoverIcon = direction === 'left' ? leftHoverArrow : rightHoverArrow;
-  // const right = direction === 'right' ? '25px' : null;
-  
   const arrowFactory = {
     left: leftArrow,
     right: rightArrow
@@ -23,11 +18,9 @@ const CarouselArrow = ({ direction, onClick }) => {
   };
 
   const [currIcon, setCurrIcon] = useState(arrowFactory[direction]);
-  // const { scrollTo } = useGetScroll();
 
   return <img 
     style={{ [direction]: '1rem' }}
-    // style={{ right: `${right}` }}
     src={currIcon} 
     alt="arrow" 
     onClick={() => onClick()} 
