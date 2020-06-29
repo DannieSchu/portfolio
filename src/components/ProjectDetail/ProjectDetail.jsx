@@ -3,16 +3,20 @@ import Carousel from '../Carousel/Carousel';
 import TextBlock from '../TextBlock/TextBlock';
 import StackList from '../StackList/StackList';
 import GitHubLinks from '../GithubLinks/GitHubLinks';
+import LargeButton from '../LargeButton/LargeButton';
+import ContributorsList from '../ContributorsList/ContributorsList';
 import { projectsArr } from '../../data/projectsArr';
 import styles from './ProjectDetail.css';
 import typeStyle from '../../styles/type.css';
-import LargeButton from '../LargeButton/LargeButton';
 
 const ProjectDetail = () => {
   const [currentProject, setCurrentProject] = useState({});
   const [currentImages, setCurrentImages] = useState([]);
   const [currentStack, setCurrentStack] = useState([]);
+  const [currentContributors, setCurrentContributors] = useState([]);
   const title = 'Sew Organized';
+
+  const possibleContributors = currentContributors.length >= 1 ? <ContributorsList contributors={currentContributors} /> : null;
 
   useEffect(() => {
     const foundProject = projectsArr.find(project => project.title === title);
@@ -20,6 +24,7 @@ const ProjectDetail = () => {
     setCurrentProject(foundProject);
     setCurrentImages(foundProject.images);
     setCurrentStack(foundProject.stack);
+    if(foundProject.contributors) {setCurrentContributors(foundProject.contributors);}
   }, []);
 
   return (
@@ -43,6 +48,7 @@ const ProjectDetail = () => {
         <section className={styles.column}>
           <Carousel images={currentImages} />
           <GitHubLinks githubBE={currentProject.githubBE} githubFE={currentProject.githubFE} />
+          {possibleContributors}
         </section>
       </section>
     </section>
