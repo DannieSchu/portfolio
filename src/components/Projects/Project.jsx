@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ProjectHover from './ProjectHover';
 import StackList from '../StackList/StackList';
@@ -15,14 +16,13 @@ const Project = ({
   site, 
   images 
 }) => {
-
   return (
     <section className={styles.Project}>
       <img src={images[0]} />
       <section className={styles.wrapper}>
         <article className={styles.text}>
           <div className={styles.heading}>
-            <a href={site} target="blank"><h3 className={typeStyles.subheading}>{title}</h3></a>
+            <Link to={`/project/${title}`}><h3 className={typeStyles.subheading}>{title}</h3></Link>
             <h3 className={typeStyles.subheading}>{year}</h3>
           </div>
           <StackList stack={stack} />

@@ -11,13 +11,11 @@ exports[`Contact component renders Contact 1`] = `
   <aside
     className="resume"
   >
-    <a
-      className="body"
-      href="/path/image"
-      target="blank"
+    <LargeButton
+      link="/path/image"
     >
       Resume
-    </a>
+    </LargeButton>
   </aside>
   <section
     className="contactInfo"

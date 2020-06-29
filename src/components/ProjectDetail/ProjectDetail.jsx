@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Carousel from '../Carousel/Carousel';
 import TextBlock from '../TextBlock/TextBlock';
 import StackList from '../StackList/StackList';
@@ -14,7 +15,7 @@ const ProjectDetail = () => {
   const [currentImages, setCurrentImages] = useState([]);
   const [currentStack, setCurrentStack] = useState([]);
   const [currentContributors, setCurrentContributors] = useState([]);
-  const title = 'Sew Organized';
+  const { title } = useParams();
 
   const possibleContributors = currentContributors.length >= 1 ? <ContributorsList contributors={currentContributors} /> : null;
 
@@ -24,7 +25,8 @@ const ProjectDetail = () => {
     setCurrentProject(foundProject);
     setCurrentImages(foundProject.images);
     setCurrentStack(foundProject.stack);
-    if(foundProject.contributors) {setCurrentContributors(foundProject.contributors);}
+    
+    if(foundProject.contributors) { setCurrentContributors(foundProject.contributors); }
   }, []);
 
   return (
