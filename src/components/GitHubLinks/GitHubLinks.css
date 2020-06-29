@@ -10,3 +10,9 @@
   justify-content: center;
   height: 4rem;
 }
+
+.link {
+  &:hover {
+    color: var(--translucent-charcoal);
+  }
+}

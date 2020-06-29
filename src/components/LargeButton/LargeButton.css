@@ -10,6 +10,7 @@
   &:hover {
     color: var(--charcoal);
     border: 5px solid var(--charcoal);
+    cursor: pointer;
   }
 
   @media only screen and (max-width: 768px) {
