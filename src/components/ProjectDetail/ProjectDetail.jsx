@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import Carousel from '../Carousel/Carousel';
 import TextBlock from '../TextBlock/TextBlock';
@@ -6,15 +7,19 @@ import StackList from '../StackList/StackList';
 import GitHubLinks from '../GithubLinks/GitHubLinks';
 import LargeButton from '../LargeButton/LargeButton';
 import ContributorsList from '../ContributorsList/ContributorsList';
+import leftArrow from '../../assets/icons/left-charcoal.png';
+import leftArrowShadow from '../../assets/icons/left-charcoal-shadow.png';
 import { projectsArr } from '../../data/projectsArr';
 import styles from './ProjectDetail.css';
 import typeStyle from '../../styles/type.css';
 
-const ProjectDetail = () => {
+const ProjectDetail = ({ history }) => {
   const [currentProject, setCurrentProject] = useState({});
   const [currentImages, setCurrentImages] = useState([]);
   const [currentStack, setCurrentStack] = useState([]);
   const [currentContributors, setCurrentContributors] = useState([]);
+  const [arrowIcon, setArrowIcon] = useState(leftArrow);
+
   const { title } = useParams();
 
   const possibleContributors = currentContributors.length >= 1 ? <ContributorsList contributors={currentContributors} /> : null;
@@ -28,9 +33,16 @@ const ProjectDetail = () => {
     
     if(foundProject.contributors) { setCurrentContributors(foundProject.contributors); }
   }, []);
-
+  
   return (
     <section className={styles.ProjectDetail}>
+      <img 
+        src={arrowIcon} 
+        onClick={() => history.goBack()} 
+        onMouseEnter={() => setArrowIcon(leftArrowShadow)}
+        onMouseLeave={() => setArrowIcon(leftArrow)}
+        className={styles.back} 
+      />
       <section className={styles.container}>
         <section className={styles.column}>
           <section className={styles.heading}>
@@ -55,6 +67,10 @@ const ProjectDetail = () => {
       </section>
     </section>
   );
+};
+
+ProjectDetail.propTypes = {
+  history: PropTypes.shape.isRequired
 };
 
 export default ProjectDetail;
