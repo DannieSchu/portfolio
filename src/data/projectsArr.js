@@ -1,10 +1,10 @@
 import apiClient from '../assets/projects/api-client/api-client.png';
 import socialDistancePing from '../assets/projects/social-distance-ping/social-distance-ping.jpeg';
-import { alcherithmImages } from './alcherithmImages';
-import { artistFinderImages } from './artistFinderImages';
-import { sewOrganizedImages } from './sewOrganizedImages';
-import { ripeBananaImages } from './ripeBananaImages';
-import { crossPondNewsroomImages } from './crossPondNewsroomImages';
+import { alcherithmImages } from './projects/alcherithm';
+import { artistFinderImages } from './projects/artistFinder';
+import { sewOrganizedImages, sewOrganizedContributors } from './projects/sewOrganized';
+import { ripeBananaImages } from './projects/ripeBanana';
+import { crossPondNewsroomImages } from './projects/crossPondNewsroom';
 
 export const projectsArr = [
   {
@@ -27,6 +27,7 @@ export const projectsArr = [
     githubFE: 'https://github.com/Sew-Organized/sew-organized-react',
     githubBE: 'https://github.com/Sew-Organized/sew-organized-server',    
     site: 'https://sew-organized.herokuapp.com/',
+    contributors: sewOrganizedContributors,
     images: sewOrganizedImages
   },
   {
