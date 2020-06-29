@@ -14,7 +14,7 @@ export const projectsArr = [
     description: 'A learning platform that helps budding developers navigate code challenges.',
     githubFE: 'https://github.com/DannieSchu/alcherithm-fe',
     githubBE: 'https://github.com/Alcherithm/alcherithm-be',
-    site: 'https://alcherithm.netlify.app/',
+    website: 'https://alcherithm.netlify.app/',
     images: alcherithmImages
   },
   {
@@ -26,7 +26,7 @@ export const projectsArr = [
     process: 'A personal catalogue of a user\'s embroidery thread stash that uses matching algorithms to compare DMC color numbers to HEX codes.',
     githubFE: 'https://github.com/Sew-Organized/sew-organized-react',
     githubBE: 'https://github.com/Sew-Organized/sew-organized-server',    
-    site: 'https://sew-organized.herokuapp.com/',
+    website: 'https://sew-organized.herokuapp.com/',
     contributors: sewOrganizedContributors,
     images: sewOrganizedImages
   },
@@ -37,7 +37,7 @@ export const projectsArr = [
     description: 'Up-to-date COVID-19 stats scraped from a dynamic website and sent to your phone on-demand or in a daily digest text.',
     githubFE: null,
     githubBE: 'https://github.com/Alchemy-Covid-19/covid-19-statbot',
-    site: null,
+    website: null,
     images: [socialDistancePing]
   },
   {
@@ -47,7 +47,7 @@ export const projectsArr = [
     description: 'Postman clone for your browser built three times with different state management methods.',
     githubFE: 'link',
     githubBE: null,
-    site: null,
+    website: null,
     images: [apiClient]
   },
   {
@@ -57,7 +57,7 @@ export const projectsArr = [
     description: 'A RESTful API that navigates complex document relationships to return films, movie studios, actors, reviews and reviewers.',
     githubFE: null,
     githubBE: 'https://github.com/DannieSchu/ripe-banana',
-    site: null,
+    website: null,
     images: ripeBananaImages
   },
   {
@@ -67,7 +67,7 @@ export const projectsArr = [
     description: 'A RESTful API that returns films, movie studios, actors, reviews and reviewers. Targets the moviegoer with a penchant for animal-inspired films.',
     githubFE: 'https://github.com/DannieSchu/artist-finder',
     githubBE: null,
-    site: null,
+    website: null,
     images: artistFinderImages
   },
   {
@@ -77,7 +77,7 @@ export const projectsArr = [
     description: 'Toggle between two different views to render news headlines from your country of choice — UK or US — in corresponding color schemes.',
     githubFE: 'https://github.com/DannieSchu/themeable-list',
     githubBE: null,
-    site: null,
+    website: null,
     images: crossPondNewsroomImages
   }
 ];

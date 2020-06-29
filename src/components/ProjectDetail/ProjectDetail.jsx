@@ -22,8 +22,6 @@ const ProjectDetail = ({ history }) => {
 
   const { title } = useParams();
 
-  const possibleContributors = currentContributors.length >= 1 ? <ContributorsList contributors={currentContributors} /> : null;
-
   useEffect(() => {
     const foundProject = projectsArr.find(project => project.title === title);
 
@@ -34,6 +32,14 @@ const ProjectDetail = ({ history }) => {
     if(foundProject.contributors) { setCurrentContributors(foundProject.contributors); }
   }, []);
   
+  const possibleContributors = currentContributors.length >= 1 ? <ContributorsList contributors={currentContributors} /> : null;
+
+  const possibleWebsite = currentProject.website ? (
+    <aside className={styles.website}>
+      <LargeButton link={currentProject.website}>View Site</LargeButton>
+    </aside>
+  ) : null;
+
   return (
     <section className={styles.ProjectDetail}>
       <img 
@@ -52,9 +58,7 @@ const ProjectDetail = ({ history }) => {
           <section className={styles.textOverview}>
             <TextBlock heading="Overview" content={currentProject.overview} />
             <TextBlock heading="Process" content={currentProject.process} />
-            <aside className={styles.website}>
-              <LargeButton link={currentProject.website}>View Site</LargeButton>
-            </aside>
+            {possibleWebsite}
           </section>
         </section>
       </section>
@@ -74,3 +78,4 @@ ProjectDetail.propTypes = {
 };
 
 export default ProjectDetail;
+
