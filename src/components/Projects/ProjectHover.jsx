@@ -4,20 +4,22 @@ import GitHubLinks from '../GithubLinks/GitHubLinks';
 import styles from './ProjectHover.css';
 import typeStyles from '../../styles/type.css';
 
-const ProjectHover = ({ description, githubBE, githubFE, site }) => (
+const ProjectHover = ({ description, githubLinks, site }) => (
   <section className={styles.ProjectHover}>
     <p className={typeStyles.body}>{description}</p>
-    <GitHubLinks githubBE={githubBE} githubFE={githubFE} />
+    <GitHubLinks githubLinks={githubLinks} />
     {site && <div className={styles.centered}>
-      <a href={site} target="blank" className={`${styles.site} ${typeStyles.body}`}>Visit the Site</a>
+      <a href={site} target="_blank" rel="noopener noreferrer" className={`${styles.site} ${typeStyles.body}`}>Visit the Site</a>
     </div>}
   </section>
 );
 
 ProjectHover.propTypes = {
   description: PropTypes.string.isRequired,
-  githubFE: PropTypes.string,
-  githubBE: PropTypes.string,
+  githubLinks: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  }).isRequired).isRequired,
   site: PropTypes.string
 };
 

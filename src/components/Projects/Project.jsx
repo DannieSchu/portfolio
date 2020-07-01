@@ -11,8 +11,7 @@ const Project = ({
   stack, 
   year, 
   description, 
-  githubFE, 
-  githubBE, 
+  githubLinks,
   site, 
   images 
 }) => {
@@ -26,7 +25,11 @@ const Project = ({
             <h3 className={typeStyles.subheading}>{year}</h3>
           </div>
           <StackList stack={stack} />
-          <ProjectHover description={description} githubFE={githubFE} githubBE={githubBE} site={site} />
+          <ProjectHover 
+            description={description} 
+            githubLinks={githubLinks}
+            site={site} 
+          />
         </article>
       </section>
     </section>
@@ -38,8 +41,10 @@ Project.propTypes = {
   stack: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   year: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
-  githubFE: PropTypes.string,
-  githubBE: PropTypes.string,
+  githubLinks: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  }).isRequired).isRequired,
   site: PropTypes.string,
   images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 };

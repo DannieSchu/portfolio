@@ -3,16 +3,31 @@ import PropTypes from 'prop-types';
 import styles from './GitHubLinks.css';
 import typeStyles from '../../styles/type.css';
 
-const GitHubLinks = ({ githubFE, githubBE }) => (
-  <div className={githubFE && githubBE ? styles.spaceBetween : styles.centered}>
-    {githubFE && <a href={githubFE} target="blank" className={`${styles.link} ${typeStyles.body}`}>Front-End Repo</a>}
-    {githubBE && <a href={githubBE} target="blank" className={`${styles.link} ${typeStyles.body}`}>Back-End Repo</a>}
-  </div>
-);
+const GitHubLinks = ({ githubLinks }) => {
+  const linkStyle = (githubLinks.length === 1) ? styles.centered : styles.spaceBetween;
+
+  const linkElements = githubLinks.map(item => (
+    <a 
+      key={item.link} 
+      href={item.link} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className={`${styles.link} ${typeStyles.body}`}
+    >{item.text}</a>
+  ));
+
+  return (
+    <div className={linkStyle}>
+      {linkElements}
+    </div>
+  );
+};
 
 GitHubLinks.propTypes = {
-  githubBE: PropTypes.string,
-  githubFE: PropTypes.string
+  githubLinks: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  }).isRequired).isRequired,
 };
 
 export default GitHubLinks;

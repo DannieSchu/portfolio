@@ -17,6 +17,7 @@ const ProjectDetail = ({ history }) => {
   const [currentProject, setCurrentProject] = useState({});
   const [currentImages, setCurrentImages] = useState([]);
   const [currentStack, setCurrentStack] = useState([]);
+  const [currentGithubLinks, setCurrentGithubLinks] = useState([]);
   const [currentContributors, setCurrentContributors] = useState([]);
   const [arrowIcon, setArrowIcon] = useState(leftArrow);
 
@@ -28,6 +29,7 @@ const ProjectDetail = ({ history }) => {
     setCurrentProject(foundProject);
     setCurrentImages(foundProject.images);
     setCurrentStack(foundProject.stack);
+    setCurrentGithubLinks(foundProject.githubLinks);
     
     if(foundProject.contributors) { setCurrentContributors(foundProject.contributors); }
   }, []);
@@ -65,7 +67,7 @@ const ProjectDetail = ({ history }) => {
       <section className={styles.container}>
         <section className={styles.column}>
           <Carousel images={currentImages} />
-          <GitHubLinks githubBE={currentProject.githubBE} githubFE={currentProject.githubFE} />
+          <GitHubLinks githubLinks={currentGithubLinks} />
           {possibleContributors}
         </section>
       </section>
@@ -78,4 +80,3 @@ ProjectDetail.propTypes = {
 };
 
 export default ProjectDetail;
-
