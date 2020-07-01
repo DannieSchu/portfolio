@@ -16,7 +16,10 @@ const ContributorsList = ({ contributors }) => {
 };
 
 ContributorsList.propTypes = {
-  contributors: PropTypes.arrayOf(PropTypes.shape.isRequired).isRequired
+  contributors: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  }).isRequired).isRequired
 };
 
 export default ContributorsList;

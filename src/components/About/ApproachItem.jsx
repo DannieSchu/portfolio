@@ -51,7 +51,11 @@ ApproachItem.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
-  paragraph: PropTypes.arrayOf(PropTypes.shape.isRequired).isRequired
+  paragraph: PropTypes.arrayOf(PropTypes.shape({
+    link: PropTypes.string,
+    linkText: PropTypes.string,
+    body: PropTypes.string.isRequired,
+  }).isRequired).isRequired
 };
 
 export default ApproachItem;
