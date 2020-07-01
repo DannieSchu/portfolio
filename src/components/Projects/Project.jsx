@@ -16,7 +16,9 @@ const Project = ({
   images
 }) => (
   <section className={styles.Project}>
-    <img src={images[0]} />
+    <Link to={`/project/${title}`}>
+      <img src={images[0]} />
+    </Link>
     <section className={styles.wrapper}>
       <article className={styles.text}>
         <div className={styles.heading}>
