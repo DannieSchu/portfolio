@@ -71,7 +71,7 @@ export const projectsData = [
     stack: ['React', 'Redux', 'Jest', 'Enzyme'],
     year: 2020,
     description: 'Postman clone for your browser built three times with different state management methods.',
-    overview: ['This API server client application allows users to send HTTP requests to RESTful APIs and view the responses. When a user selects a requests from their history section, the form autofills with the previous request parameters.'],
+    overview: ['This API server client application allows users to send HTTP requests to RESTful APIs and view the responses. When a user selects a request from their history section, the form autofills with the previous request parameters.'],
     process: ['This application was built three times with different state management approaches: 1) building custom hooks into a container/component model to manage state locally; 2) storing state globally using ContextAPI; and 3) integrating Redux to manage global state with pure functions.', 'I built each presentation component individually with snapshot tests and CSS modules; and I worked in vertical slices to add functionality, maintaining a functioning app as new features were added by adhering to agile methodologies.'],
     githubLinks: [
       {
