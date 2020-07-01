@@ -2,11 +2,11 @@ import React from 'react';
 import TechItem from './TechItem';
 import PageHeading from '../PageHeading/PageHeading';
 import Arrow from '../Nav/Arrow';
-import { techArr } from '../../data/techArr';
+import { techData } from '../../data/techData';
 import styles from './Tech.css';
 
 const Tech = () => {
-  const techElements = techArr.map(element => <TechItem key={element.title} {...element} />);
+  const techElements = techData.map(element => <TechItem key={element.title} {...element} />);
 
   return (
     <section name="Tech" className={styles.Tech}>

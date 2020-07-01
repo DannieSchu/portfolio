@@ -21,7 +21,9 @@ const Project = ({
       <section className={styles.wrapper}>
         <article className={styles.text}>
           <div className={styles.heading}>
-            <Link to={`/project/${title}`}><h3 className={typeStyles.subheading}>{title}</h3></Link>
+            <Link to={`/project/${title}`}>
+              <h3 className={typeStyles.subheading}>{title}</h3>
+            </Link>
             <h3 className={typeStyles.subheading}>{year}</h3>
           </div>
           <StackList stack={stack} />

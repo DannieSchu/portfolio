@@ -3,7 +3,29 @@ import PropTypes from 'prop-types';
 import styles from './Approach.css';
 import typeStyle from '../../styles/type.css';
 
-const ApproachItem = ({ name, image, heading, paragraph }) => {
+const ApproachItem = ({
+  name,
+  image,
+  heading,
+  paragraph
+}) => {
+  const textContent = paragraph.map((text, index) => (
+    <p key={index}>
+      {text.link ? (
+        <>
+          <a
+            href={text.link}
+            target="_blank"
+            rel="noopener noreferrer">
+            {text.linkText}
+          </a>
+          {text.body}
+        </>
+      ) : text.body
+      }
+    </p>
+  ));
+
   return (
     <article className={`${styles.element} ${styles[name]}`}>
       <img src={image} alt="Ink Blot" />
@@ -18,10 +40,7 @@ const ApproachItem = ({ name, image, heading, paragraph }) => {
         }>
         <h3 className={typeStyle.subheading}>{heading}</h3>
         <div className={`${styles.details} ${typeStyle.body}`}>
-          {paragraph.map((text, index) => (
-            <p key={index}>
-              {text.link ? <><a href={text.link} target="blank">{text.linkText}</a>{text.body}</> : text.body}</p>
-          ))}
+          {textContent}
         </div>
       </div>
     </article>

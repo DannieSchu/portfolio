@@ -1,10 +1,10 @@
 import React from 'react';
 import NavLink from './NavLink';
-import { navIconsArr } from '../../data/navIconsArr';
+import { navIconsData } from '../../data/navIconsData';
 import styles from './NavBar.css';
 
 const NavBar = () => {
-  const navElements = navIconsArr.map((element, i) => <NavLink key={i} {...element} />);
+  const navElements = navIconsData.map((element, i) => <NavLink key={i} {...element} />);
 
   return (
     <nav className={styles.NavBar}>

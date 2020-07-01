@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactArr } from '../../data/contactArr';
+import { contactData } from '../../data/contactData';
 import ContactMethod from './ContactMethod';
 import PageHeading from '../PageHeading/PageHeading';
 import LargeButton from '../LargeButton/LargeButton';
@@ -8,7 +8,7 @@ import inkBlot from '../../assets/images/splotch4.png';
 import styles from './Contact.css';
 
 const Contact = () => {
-  const contactElements = contactArr.map(item => <ContactMethod key={item.link} {...item} />);
+  const contactElements = contactData.map(item => <ContactMethod key={item.link} {...item} />);
 
   return (
     <section name="Contact" className={styles.Contact}>

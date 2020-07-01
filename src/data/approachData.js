@@ -2,7 +2,7 @@ import inkBlot1 from '../assets/images/splotch1.png';
 import inkBlot2 from '../assets/images/splotch2.png';
 import inkBlot3 from '../assets/images/splotch3.png';
 
-export const approachArr = [
+export const approachData = [
   {
     image: inkBlot3,
     name: 'design',

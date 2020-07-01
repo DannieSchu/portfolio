@@ -9,7 +9,7 @@ import LargeButton from '../LargeButton/LargeButton';
 import ContributorsList from '../ContributorsList/ContributorsList';
 import leftArrow from '../../assets/icons/left-charcoal.png';
 import leftArrowShadow from '../../assets/icons/left-charcoal-shadow.png';
-import { projectsArr } from '../../data/projectsArr';
+import { projectsData } from '../../data/projectsData';
 import styles from './ProjectDetail.css';
 import typeStyle from '../../styles/type.css';
 
@@ -24,16 +24,16 @@ const ProjectDetail = ({ history }) => {
   const { title } = useParams();
 
   useEffect(() => {
-    const foundProject = projectsArr.find(project => project.title === title);
+    const foundProject = projectsData.find(project => project.title === title);
 
     setCurrentProject(foundProject);
     setCurrentImages(foundProject.images);
     setCurrentStack(foundProject.stack);
     setCurrentGithubLinks(foundProject.githubLinks);
-    
+
     if(foundProject.contributors) { setCurrentContributors(foundProject.contributors); }
   }, []);
-  
+
   const possibleContributors = currentContributors.length >= 1 ? <ContributorsList contributors={currentContributors} /> : null;
 
   const possibleWebsite = currentProject.website ? (
@@ -44,12 +44,12 @@ const ProjectDetail = ({ history }) => {
 
   return (
     <section className={styles.ProjectDetail}>
-      <img 
-        src={arrowIcon} 
-        onClick={() => history.goBack()} 
+      <img
+        src={arrowIcon}
+        onClick={() => history.goBack()}
         onMouseEnter={() => setArrowIcon(leftArrowShadow)}
         onMouseLeave={() => setArrowIcon(leftArrow)}
-        className={styles.back} 
+        className={styles.back}
       />
       <section className={styles.container}>
         <section className={styles.column}>
