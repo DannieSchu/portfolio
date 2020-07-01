@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Carousel from '../Carousel/Carousel';
 import TextBlock from '../TextBlock/TextBlock';
 import StackList from '../StackList/StackList';
-import GitHubLinks from '../GithubLinks/GitHubLinks';
+import GitHubLinks from '../GitHubLinks/GitHubLinks';
 import LargeButton from '../LargeButton/LargeButton';
 import ContributorsList from '../ContributorsList/ContributorsList';
 import leftArrow from '../../assets/icons/left-charcoal.png';
