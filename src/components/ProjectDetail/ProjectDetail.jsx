@@ -60,7 +60,6 @@ const ProjectDetail = ({ history }) => {
           <section className={styles.textOverview}>
             <TextBlock heading="Overview" content={currentProject.overview} />
             <TextBlock heading="Process" content={currentProject.process} />
-            {possibleWebsite}
           </section>
         </section>
       </section>
@@ -69,6 +68,7 @@ const ProjectDetail = ({ history }) => {
           <Carousel images={currentImages} />
           <GitHubLinks githubLinks={currentGithubLinks} />
           {possibleContributors}
+          {possibleWebsite}
         </section>
       </section>
     </section>
@@ -76,7 +76,9 @@ const ProjectDetail = ({ history }) => {
 };
 
 ProjectDetail.propTypes = {
-  history: PropTypes.shape.isRequired
+  history: PropTypes.shape({
+    goBack: PropTypes.func.isRequired
+  }).isRequired
 };
 
 export default ProjectDetail;
