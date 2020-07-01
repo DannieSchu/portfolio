@@ -19,6 +19,8 @@ const ProjectDetail = ({ history }) => {
   const [currentStack, setCurrentStack] = useState([]);
   const [currentGithubLinks, setCurrentGithubLinks] = useState([]);
   const [currentContributors, setCurrentContributors] = useState([]);
+  const [currentProjectProcess, setCurrentProjectProcess] = useState([]);
+  const [currentProjectOverview, setCurrentProjectOverview] = useState([]);
   const [arrowIcon, setArrowIcon] = useState(leftArrow);
 
   const { title } = useParams();
@@ -29,6 +31,8 @@ const ProjectDetail = ({ history }) => {
     setCurrentProject(foundProject);
     setCurrentImages(foundProject.images);
     setCurrentStack(foundProject.stack);
+    setCurrentProjectOverview(foundProject.overview);
+    setCurrentProjectProcess(foundProject.process);
     setCurrentGithubLinks(foundProject.githubLinks);
 
     if(foundProject.contributors) { setCurrentContributors(foundProject.contributors); }
@@ -58,8 +62,8 @@ const ProjectDetail = ({ history }) => {
             <StackList stack={currentStack} />
           </section>
           <section className={styles.textOverview}>
-            <TextBlock heading="Overview" content={currentProject.overview} />
-            <TextBlock heading="Process" content={currentProject.process} />
+            <TextBlock heading="Overview" content={currentProjectOverview} />
+            <TextBlock heading="Process" content={currentProjectProcess} />
           </section>
         </section>
       </section>
