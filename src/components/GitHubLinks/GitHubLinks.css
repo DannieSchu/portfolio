@@ -1,0 +1,18 @@
+.spaceBetween {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 2.5rem;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+}
+
+.link {
+  &:hover {
+    color: var(--translucent-charcoal);
+  }
+}

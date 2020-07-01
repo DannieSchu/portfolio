@@ -11,21 +11,6 @@
     right: 8%;
     margin: 2rem;
     z-index: 1;
-    
-    a {
-      padding: 2rem 6rem;
-      border: 5px solid white;
-      border-radius: 2.5rem;
-      font-size: 1.8rem;
-      text-align: center;
-      text-decoration: none;
-      transition: color .1s ease-out, border .1s ease-out;
-
-      &:hover {
-        color: var(--charcoal);
-        border: 5px solid var(--charcoal);
-      }
-    }
 
     @media only screen and (max-width: 768px) {
     text-align: center;

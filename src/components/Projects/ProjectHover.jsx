@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import typeStyles from '../../styles/type.css';
+import GitHubLinks from '../GitHubLinks/GitHubLinks';
 import styles from './ProjectHover.css';
+import typeStyles from '../../styles/type.css';
 
-const ProjectHover = ({ description, githubBE, githubFE, site }) => (
+const ProjectHover = ({ description, githubLinks, site }) => (
   <section className={styles.ProjectHover}>
     <p className={typeStyles.body}>{description}</p>
-    <div className={githubFE && githubBE ? styles.spaceBetween : styles.centered}>
-      {githubFE && <a href={githubFE} target="blank" className={typeStyles.body}>Front-End Repo</a>}
-      {githubBE && <a href={githubBE} target="blank" className={typeStyles.body}>Back-End Repo</a>}
-    </div>
+    <GitHubLinks githubLinks={githubLinks} />
     {site && <div className={styles.centered}>
-      <a href={site} target="blank" className={`${styles.site} ${typeStyles.body}`}>Visit the Site</a>
+      <a href={site} target="_blank" rel="noopener noreferrer" className={`${styles.site} ${typeStyles.body}`}>Visit the Site</a>
     </div>}
   </section>
 );
 
 ProjectHover.propTypes = {
   description: PropTypes.string.isRequired,
-  githubFE: PropTypes.string,
-  githubBE: PropTypes.string,
+  githubLinks: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  }).isRequired).isRequired,
   site: PropTypes.string
 };
 

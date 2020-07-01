@@ -1,4 +1,4 @@
-export const techArr = [
+export const techData = [
   {
     title: 'Languages',
     definitions: ['JavaScript', 'HTML', 'CSS']

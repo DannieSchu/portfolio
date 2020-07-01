@@ -3,7 +3,7 @@ import github from '../assets/social-media/github.png';
 import linkedin from '../assets/social-media/linkedin.png';
 import twitter from '../assets/social-media/twitter.png';
 
-export const contactArr = [
+export const contactData = [
   {
     image: twitter,
     link: 'https://twitter.com/DannieSchumaker',

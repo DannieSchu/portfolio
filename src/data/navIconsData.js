@@ -7,7 +7,7 @@ import projectsActiveIcon from '../assets/icons/projects-active.png';
 import contactIcon from '../assets/icons/contact.png';
 import contactActiveIcon from '../assets/icons/contact-active.png';
 
-export const navIconsArr = [
+export const navIconsData = [
   {
     to: 'Home',
     icon: homeIcon,

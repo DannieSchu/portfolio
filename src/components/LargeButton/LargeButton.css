@@ -1,0 +1,22 @@
+.LargeButton {
+  padding: 2rem 6rem;
+  border: 5px solid white;
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s ease-out, border .1s ease-out;
+
+  &:hover {
+    color: var(--charcoal);
+    border: 5px solid var(--charcoal);
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.4rem;
+    padding: 1.6rem 4rem;
+    border: 4px solid white;
+    border-radius: 2rem;
+  }
+}

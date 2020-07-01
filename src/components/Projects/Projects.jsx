@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 import Project from './Project';
 import Arrow from '../Nav/Arrow';
-import useScrollBox from '../../hooks/getScrollBox';
-import { projectsArr } from '../../data/projectsArr';
-import styles from './Projects.css';
 import PageHeading from '../PageHeading/PageHeading';
+import useScrollBox from '../../hooks/getScrollBox';
+import { projectsData } from '../../data/projectsData';
+import styles from './Projects.css';
 
 const Projects = () => {
-  const projectElements = projectsArr.map(project => <Project key={project.title} {...project} />);
+  const projectElements = projectsData.map(project => <Project key={project.title} {...project} />);
   const scrollWrapperRef = useRef();
   const { isDragging } = useScrollBox(scrollWrapperRef);
 
