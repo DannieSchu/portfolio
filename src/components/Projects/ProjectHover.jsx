@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GitHubLinks from '../GithubLinks/GitHubLinks';
+import GitHubLinks from '../GitHubLinks/GitHubLinks';
 import styles from './ProjectHover.css';
 import typeStyles from '../../styles/type.css';
 
