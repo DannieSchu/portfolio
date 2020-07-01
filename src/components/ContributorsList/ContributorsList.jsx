@@ -9,7 +9,8 @@ const ContributorsList = ({ contributors }) => {
 
   return (
     <div className={styles.ContributorsList}>
-      <span className={typeStyles.allCaps} style={{ fontSize: '1.1rem' }}>Contributors: </span>{contributorsList}
+      <h3 className={typeStyles.pullOut}>Other Contributors</h3>
+      {contributorsList}
     </div>
   );
 };
