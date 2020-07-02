@@ -5,12 +5,12 @@ import CarouselArrow from './CarouselArrow';import styles from './Carousel.css';
 import { usePagination } from '../../hooks/paginateCarousel';
 
 const Carousel = ({ images }) => {
-  const { currentIndex, goToPrevSlide, goToNextSlide } = usePagination(images); 
+  const { currentIndex, carouselImages, goToPrevSlide, goToNextSlide } = usePagination(images); 
 
   return (
     <section className={styles.Carousel}>
       <CarouselArrow direction="left" onClick={goToPrevSlide} />
-      <Slide image={images[currentIndex]} />
+      <Slide image={carouselImages[currentIndex]} />
       <CarouselArrow direction="right" onClick={goToNextSlide} />
     </section>
   );

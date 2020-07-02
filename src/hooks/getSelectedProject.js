@@ -20,7 +20,9 @@ export const useGetSelectedProject = (title) => {
     setSelectedProjectProcess(foundProject.process);
     setSelectedGithubLinks(foundProject.githubLinks);
 
-    if(foundProject.contributors) { setSelectedContributors(foundProject.contributors); }
+    if(foundProject.contributors) { 
+      setSelectedContributors(foundProject.contributors); 
+    }
   }, []);
 
   return { 
