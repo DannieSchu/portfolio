@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import Carousel from '../Carousel/Carousel';
@@ -9,40 +9,30 @@ import LargeButton from '../LargeButton/LargeButton';
 import ContributorsList from '../ContributorsList/ContributorsList';
 import leftArrow from '../../assets/icons/left-charcoal.png';
 import leftArrowShadow from '../../assets/icons/left-charcoal-shadow.png';
-import { projectsData } from '../../data/projectsData';
+import { useGetSelectedProject } from '../../hooks/getSelectedProject';
 import styles from './ProjectDetail.css';
 import typeStyle from '../../styles/type.css';
 
 const ProjectDetail = ({ history }) => {
-  const [currentProject, setCurrentProject] = useState({});
-  const [currentImages, setCurrentImages] = useState([]);
-  const [currentStack, setCurrentStack] = useState([]);
-  const [currentGithubLinks, setCurrentGithubLinks] = useState([]);
-  const [currentContributors, setCurrentContributors] = useState([]);
-  const [currentProjectProcess, setCurrentProjectProcess] = useState([]);
-  const [currentProjectOverview, setCurrentProjectOverview] = useState([]);
   const [arrowIcon, setArrowIcon] = useState(leftArrow);
 
   const { title } = useParams();
 
-  useEffect(() => {
-    const foundProject = projectsData.find(project => project.title === title);
+  const { 
+    selectedProject, 
+    selectedImages, 
+    selectedStack, 
+    selectedProjectOverview, 
+    selectedProjectProcess, 
+    selectedGithubLinks, 
+    selectedContributors 
+  } = useGetSelectedProject(title);
 
-    setCurrentProject(foundProject);
-    setCurrentImages(foundProject.images);
-    setCurrentStack(foundProject.stack);
-    setCurrentProjectOverview(foundProject.overview);
-    setCurrentProjectProcess(foundProject.process);
-    setCurrentGithubLinks(foundProject.githubLinks);
+  const possibleContributors = selectedContributors.length >= 1 ? <ContributorsList contributors={selectedContributors} /> : null;
 
-    if(foundProject.contributors) { setCurrentContributors(foundProject.contributors); }
-  }, []);
-
-  const possibleContributors = currentContributors.length >= 1 ? <ContributorsList contributors={currentContributors} /> : null;
-
-  const possibleWebsite = currentProject.website ? (
+  const possibleWebsite = selectedProject.website ? (
     <aside className={styles.website}>
-      <LargeButton link={currentProject.website}>View Site</LargeButton>
+      <LargeButton link={selectedProject.website}>View Site</LargeButton>
     </aside>
   ) : null;
 
@@ -59,18 +49,18 @@ const ProjectDetail = ({ history }) => {
         <section className={styles.column}>
           <section className={styles.heading}>
             <h2 className={typeStyle.pageHeading}>{title}</h2>
-            <StackList stack={currentStack} />
+            <StackList stack={selectedStack} />
           </section>
           <section className={styles.textOverview}>
-            <TextBlock heading="Overview" content={currentProjectOverview} />
-            <TextBlock heading="Process" content={currentProjectProcess} />
+            <TextBlock heading="Overview" content={selectedProjectOverview} />
+            <TextBlock heading="Process" content={selectedProjectProcess} />
           </section>
         </section>
       </section>
       <section className={styles.container}>
         <section className={styles.column}>
-          <Carousel images={currentImages} />
-          <GitHubLinks githubLinks={currentGithubLinks} />
+          <Carousel images={selectedImages} />
+          <GitHubLinks githubLinks={selectedGithubLinks} />
           {possibleContributors}
           {possibleWebsite}
         </section>

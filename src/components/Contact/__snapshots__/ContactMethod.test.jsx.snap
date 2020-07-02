@@ -4,6 +4,8 @@ exports[`ContactMethod component renders ContactMethod 1`] = `
 <a
   className="ContactMethod"
   href="https://twitter.com/DannieSchumaker"
+  rel="noopener noreferrer"
+  target="_blank"
 >
   <img
     alt="dannieschumaker"

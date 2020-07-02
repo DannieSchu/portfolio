@@ -5,7 +5,11 @@ import typeStyles from '../../styles/type.css';
 
 const ContactMethod = ({ image, link, text }) => {
   return (
-    <a href={link} className={styles.ContactMethod}>
+    <a
+      href={link}
+      className={styles.ContactMethod} target="_blank"
+      rel="noopener noreferrer"
+    >
       <img src={image} alt={text} />
       <p className={typeStyles.body}>{text}</p>
     </a>
