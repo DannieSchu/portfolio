@@ -20,11 +20,13 @@ exports[`Home component renders Home 1`] = `
   <img
     alt="flower illustration"
     className="largeFlowers"
+    onLoad={[Function]}
     src="/path/image"
   />
   <img
     alt="flower illustration"
     className="smallFlowers"
+    onLoad={[Function]}
     src="/path/image"
   />
   <Arrow
