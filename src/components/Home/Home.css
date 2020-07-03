@@ -1,6 +1,7 @@
 .Home {
   height: 100vh;
   background-color: rgb(226, 233, 226);
+  transition: opacity .5s ease-in;
 
   h1 {
     position: relative;
