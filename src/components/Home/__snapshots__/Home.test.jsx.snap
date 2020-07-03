@@ -4,6 +4,11 @@ exports[`Home component renders Home 1`] = `
 <section
   className="Home"
   name="Home"
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
 >
   <h1
     className="mainHeading"

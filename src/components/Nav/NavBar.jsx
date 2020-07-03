@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import NavLink from './NavLink';
 import { navIconsData } from '../../data/navIconsData';
+import { useGetOpacity } from '../../hooks/getOpacity';
 import styles from './NavBar.css';
 
 const NavBar = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => setIsMounted(true), []);
-
-  const opacity = isMounted ? 1 : 0;
+  const opacity = useGetOpacity();
 
   const navElements = navIconsData.map((element, i) => <NavLink key={i} {...element} />);
 

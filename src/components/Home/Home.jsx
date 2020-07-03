@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Arrow from '../Nav/Arrow';
 import largeFlowers from '../../assets/images/large-flowers.png';
 import smallFlowers from '../../assets/images/small-flowers.png';
 import salmonIcon from '../../assets/icons/salmon-arrow.png';
 import salmonShadowIcon from '../../assets/icons/salmon-arrow-shadow.png';
+import { useGetOpacity } from '../../hooks/getOpacity';
 import typeStyle from '../../styles/type.css';
 import styles from './Home.css';
 
 const Home = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => setIsMounted(true), []);
-
-  const opacity = isMounted ? 1 : 0;
+  const opacity = useGetOpacity();
 
   return (
     <section name="Home" className={styles.Home} style={{ opacity }}>

@@ -3,6 +3,11 @@
 exports[`NavBar component renders NavBar 1`] = `
 <nav
   className="NavBar"
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
 >
   <NavLink
     activeIcon="/path/image"
