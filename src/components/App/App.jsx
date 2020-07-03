@@ -10,17 +10,20 @@ import Loading from '../Loading/Loading';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
-  
+  const [timeoutStatus, setTimeoutStatus] = useState(null);
+
   useEffect(() => {
+    setTimeoutStatus('initating');
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
+    setTimeoutStatus('completed');
   }, []);
-  
+
   if(isLoading) {
-    return <Loading />;
+    return <Loading timeoutStatus={timeoutStatus} />;
   }
-  
+
   return (
     <Router>
       <Switch>
