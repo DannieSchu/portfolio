@@ -16,20 +16,18 @@ import typeStyle from '../../styles/type.css';
 
 const ProjectDetail = ({ history }) => {
   const [arrowIcon, setArrowIcon] = useState(leftArrow);
-
+  const [loadedImages, setLoadedImages] = useState([]);
   const { title } = useParams();
-
-  const { 
-    selectedProject, 
-    selectedImages, 
-    selectedStack, 
-    selectedProjectOverview, 
-    selectedProjectProcess, 
-    selectedGithubLinks, 
-    selectedContributors 
+  const {
+    selectedProject,
+    selectedImages,
+    selectedStack,
+    selectedProjectOverview,
+    selectedProjectProcess,
+    selectedGithubLinks,
+    selectedContributors
   } = useGetSelectedProject(title);
 
-  const [loadedImages, setLoadedImages] = useState([]);
   const possibleContributors = selectedContributors.length >= 1 ? <ContributorsList contributors={selectedContributors} /> : null;
 
   const possibleWebsite = selectedProject.website ? (
@@ -38,7 +36,17 @@ const ProjectDetail = ({ history }) => {
     </aside>
   ) : null;
 
+  const imagesBeingLoaded = selectedImages.map((item, i) => (
+    <img
+      src={item}
+      onLoad={() => onLoad(item)}
+      key={i} 
+    />
+  ));
+
   const onLoad = loadedImage => setLoadedImages(loadedImages.concat(loadedImage));
+
+  const carouselOrLoadingSpinner = selectedImages.length > loadedImages.length ? <Loading /> : <Carousel images={loadedImages} />;
 
   return (
     <section className={styles.ProjectDetail}>
@@ -47,7 +55,7 @@ const ProjectDetail = ({ history }) => {
         onClick={() => history.goBack()}
         onMouseEnter={() => setArrowIcon(leftArrowShadow)}
         onMouseLeave={() => setArrowIcon(leftArrow)}
-        className={styles.back}
+        className={styles.backArrow}
       />
       <section className={styles.container}>
         <section className={styles.column}>
@@ -63,17 +71,12 @@ const ProjectDetail = ({ history }) => {
       </section>
       <section className={styles.container}>
         <section className={styles.column}>
-          {selectedImages.length < loadedImages.length ? <Loading /> : <Carousel images={loadedImages} />}
+          {carouselOrLoadingSpinner}
           <GitHubLinks githubLinks={selectedGithubLinks} />
           {possibleContributors}
           {possibleWebsite}
           <div style={{ display: 'none' }}>
-            {selectedImages.map((item, i) =>
-              <img 
-                src={item} 
-                onLoad={() => onLoad(item)} 
-                key={i} />
-            )}
+            {imagesBeingLoaded}
           </div>
         </section>
       </section>
