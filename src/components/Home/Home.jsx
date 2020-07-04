@@ -1,12 +1,12 @@
 import React from 'react';
 import Arrow from '../Nav/Arrow';
+import { useOpacity, useSetImageOneLoaded, useSetImageTwoLoaded } from '../../hooks/LoadingProvider';
 import largeFlowers from '../../assets/images/large-flowers.png';
 import smallFlowers from '../../assets/images/small-flowers.png';
 import salmonIcon from '../../assets/icons/salmon-arrow.png';
 import salmonShadowIcon from '../../assets/icons/salmon-arrow-shadow.png';
 import typeStyle from '../../styles/type.css';
 import styles from './Home.css';
-import { useOpacity, useSetImageOneLoaded, useSetImageTwoLoaded } from '../../hooks/LoadingProvider';
 
 const Home = () => {
   const opacity = useOpacity();
