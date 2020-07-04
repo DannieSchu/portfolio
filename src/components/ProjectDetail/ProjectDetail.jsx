@@ -46,7 +46,7 @@ const ProjectDetail = ({ history }) => {
 
   const onLoad = loadedImage => setLoadedImages(loadedImages.concat(loadedImage));
 
-  const carouselOrLoadingSpinner = selectedImages.length > loadedImages.length ? <Loading /> : <Carousel images={loadedImages} />;
+  const carouselOrLoadingSpinner = selectedImages.length > loadedImages.length ? <Loading background="small" /> : <Carousel images={loadedImages} />;
 
   return (
     <section className={styles.ProjectDetail}>

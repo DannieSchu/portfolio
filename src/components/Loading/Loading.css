@@ -1,10 +1,27 @@
 .Loading {
   width: 100%;
-  height: 100vh;
   position: relative;
-  background-color: var(--salmon);
   transition: opacity .5s ease-out 1.3s;
   
+  &.small {
+    height: 21rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    .spinner div:after {
+      background: var(--charcoal);
+    }
+
+    @media only screen and (max-width: 768px) {
+      height: 11.4rem;
+    }
+  }
+
+  &.fullscreen {
+    height: 100vh;
+    background-color: var(--salmon);
+  }
+
   &.initiating {
     opacity: 1;
   }
@@ -14,10 +31,9 @@
   }
 
   .spinner {
-    display: inline-block;
     position: relative;
-    left: 47%;
-    top: 43%;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
     width: 80px;
     height: 80px;
   }
@@ -34,7 +50,6 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--charcoal);
     background: white;
     margin: -4px 0 0 -4px;
   }

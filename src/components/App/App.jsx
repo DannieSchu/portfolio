@@ -14,7 +14,7 @@ export default function App() {
   const timeoutStatus = useTimeoutStatus();
 
   if(isLoading) {
-    return <Loading timeoutStatus={timeoutStatus} />;
+    return <Loading timeoutStatus={timeoutStatus} background="fullscreen" />;
   }
 
   return (
