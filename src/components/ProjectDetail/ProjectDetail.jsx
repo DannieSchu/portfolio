@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 import Carousel from '../Carousel/Carousel';
 import TextBlock from '../TextBlock/TextBlock';
 import StackList from '../StackList/StackList';
@@ -28,6 +29,7 @@ const ProjectDetail = ({ history }) => {
     selectedContributors 
   } = useGetSelectedProject(title);
 
+  const [loadedImages, setLoadedImages] = useState([]);
   const possibleContributors = selectedContributors.length >= 1 ? <ContributorsList contributors={selectedContributors} /> : null;
 
   const possibleWebsite = selectedProject.website ? (
@@ -35,6 +37,8 @@ const ProjectDetail = ({ history }) => {
       <LargeButton link={selectedProject.website}>View Site</LargeButton>
     </aside>
   ) : null;
+
+  const onLoad = loadedImage => setLoadedImages(loadedImages.concat(loadedImage));
 
   return (
     <section className={styles.ProjectDetail}>
@@ -59,10 +63,18 @@ const ProjectDetail = ({ history }) => {
       </section>
       <section className={styles.container}>
         <section className={styles.column}>
-          <Carousel images={selectedImages} />
+          {selectedImages.length < loadedImages.length ? <Loading /> : <Carousel images={loadedImages} />}
           <GitHubLinks githubLinks={selectedGithubLinks} />
           {possibleContributors}
           {possibleWebsite}
+          <div style={{ display: 'none' }}>
+            {selectedImages.map((item, i) =>
+              <img 
+                src={item} 
+                onLoad={() => onLoad(item)} 
+                key={i} />
+            )}
+          </div>
         </section>
       </section>
     </section>
