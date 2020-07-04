@@ -3,8 +3,8 @@
   height: 100vh;
   position: relative;
   background-color: var(--salmon);
-  transition: opacity .8s ease-out 1.5s;
-
+  transition: opacity .5s ease-out 1.3s;
+  
   &.initiating {
     opacity: 1;
   }
