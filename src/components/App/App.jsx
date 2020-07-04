@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../Home/Home';
 import NavBar from '../Nav/NavBar';
@@ -7,21 +7,14 @@ import AboutContainer from '../About/AboutContainer';
 import Contact from '../Contact/Contact';
 import ProjectDetail from '../ProjectDetail/ProjectDetail';
 import Loading from '../Loading/Loading';
+import { useLoading, useTimeoutStatus } from '../../hooks/LoadingProvider';
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [timeoutStatus, setTimeoutStatus] = useState(null);
-
-  useEffect(() => {
-    setTimeoutStatus('initating');
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    setTimeoutStatus('completed');
-  }, []);
+  const isLoading = useLoading();
+  const timeoutStatus = useTimeoutStatus();
 
   if(isLoading) {
-    return <Loading timeoutStatus={timeoutStatus} />;
+    return <Loading timeoutStatus={timeoutStatus} background="fullscreen" />;
   }
 
   return (

@@ -47,7 +47,7 @@
     margin: 2rem;
   }
 
-  .back {
+  .backArrow {
     position: absolute;
     top: 5rem;
     left: 3rem;
@@ -64,7 +64,7 @@
       min-width: 20rem;
     }
 
-    .back {
+    .backArrow {
       top: 2rem;
       left: 85%;
       height: 2rem;

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slide from './Slide';
 import CarouselArrow from './CarouselArrow';
-import styles from './Carousel.css';
 import { usePagination } from '../../hooks/paginateCarousel';
+import styles from './Carousel.css';
 
 const Carousel = ({ images }) => {
   const { visibleImage, goToPrevSlide, goToNextSlide } = usePagination(images); 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 import Carousel from '../Carousel/Carousel';
 import TextBlock from '../TextBlock/TextBlock';
 import StackList from '../StackList/StackList';
@@ -15,17 +16,16 @@ import typeStyle from '../../styles/type.css';
 
 const ProjectDetail = ({ history }) => {
   const [arrowIcon, setArrowIcon] = useState(leftArrow);
-
+  const [loadedImages, setLoadedImages] = useState([]);
   const { title } = useParams();
-
-  const { 
-    selectedProject, 
-    selectedImages, 
-    selectedStack, 
-    selectedProjectOverview, 
-    selectedProjectProcess, 
-    selectedGithubLinks, 
-    selectedContributors 
+  const {
+    selectedProject,
+    selectedImages,
+    selectedStack,
+    selectedProjectOverview,
+    selectedProjectProcess,
+    selectedGithubLinks,
+    selectedContributors
   } = useGetSelectedProject(title);
 
   const possibleContributors = selectedContributors.length >= 1 ? <ContributorsList contributors={selectedContributors} /> : null;
@@ -36,6 +36,18 @@ const ProjectDetail = ({ history }) => {
     </aside>
   ) : null;
 
+  const imagesBeingLoaded = selectedImages.map((item, i) => (
+    <img
+      src={item}
+      onLoad={() => onLoad(item)}
+      key={i} 
+    />
+  ));
+
+  const onLoad = loadedImage => setLoadedImages(loadedImages.concat(loadedImage));
+
+  const carouselOrLoadingSpinner = selectedImages.length > loadedImages.length ? <Loading background="small" /> : <Carousel images={loadedImages} />;
+
   return (
     <section className={styles.ProjectDetail}>
       <img
@@ -43,7 +55,7 @@ const ProjectDetail = ({ history }) => {
         onClick={() => history.goBack()}
         onMouseEnter={() => setArrowIcon(leftArrowShadow)}
         onMouseLeave={() => setArrowIcon(leftArrow)}
-        className={styles.back}
+        className={styles.backArrow}
       />
       <section className={styles.container}>
         <section className={styles.column}>
@@ -59,10 +71,13 @@ const ProjectDetail = ({ history }) => {
       </section>
       <section className={styles.container}>
         <section className={styles.column}>
-          <Carousel images={selectedImages} />
+          {carouselOrLoadingSpinner}
           <GitHubLinks githubLinks={selectedGithubLinks} />
           {possibleContributors}
           {possibleWebsite}
+          <div style={{ display: 'none' }}>
+            {imagesBeingLoaded}
+          </div>
         </section>
       </section>
     </section>
