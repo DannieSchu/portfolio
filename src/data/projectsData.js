@@ -54,7 +54,7 @@ export const projectsData = [
     stack: ['MongoDB', 'Mongoose', 'Node', 'Express', 'Jest', 'Twilio', 'Puppeteer'],
     year: 2020,
     description: 'Up-to-date COVID-19 stats scraped from a dynamic website and sent to your phone on-demand or in a daily digest text.',
-    overview: ['Americans hoping to stay apprised of the pandemic\'s progression are baraged with erronious data. This back-end app eliminates information overload by sending up-to-date, location-specific statistics from reliable sources to a user\'s phone on demand or daily at 5:00 pm.'],
+    overview: ['Americans hoping to stay apprised of the pandemic\'s progression are barraged with erronious data. This back-end app eliminates information overload by sending up-to-date, location-specific statistics from reliable sources to a user\'s phone on demand or daily at 5:00 pm.'],
     process: ['An integral part of our app was scraping statistics from a reliable, comprehensive and frequently updated website. To wait for this data to render before capturing it, I implemented a headless browser with Puppeteer.', 'A teammate and I munged the scraped data to coincide with our Mongoose models, sent it to our MongoDB database, and instituted an hourly cron job to keep our data up-to-date. We then used Twilio to send the stats to users in the daily digest SMS.', 'When our source site changed its shape (thereby halting our scraper\'s utility) two weeks after we built it, my partner and I redirected our energy from other projects to quickly find a new source and adjust our scraper accordingly. Since this app was built in a mere five days, I saw plenty of opporunity for growth; I refactored code throughout the app to improve both readability and efficiency.'],
     githubLinks: [
       {
