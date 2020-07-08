@@ -9,22 +9,26 @@ import contactActiveIcon from '../assets/icons/contact-active.png';
 
 export const navIconsData = [
   {
-    to: 'Home',
+    to: 'home',
+    text: 'Home',
     icon: homeIcon,
     activeIcon: homeActiveIcon
   },
   {
-    to: 'About',
+    to: 'aboutContainer',
+    text: 'About',
     icon: aboutIcon,
     activeIcon: aboutActiveIcon
   },
   {
-    to: 'Projects',
+    to: 'projects',
+    text: 'Projects',
     icon: projectsIcon,
     activeIcon: projectsActiveIcon
   },
   {
-    to: 'Contact',
+    to: 'contact',
+    text: 'Contact',
     icon: contactIcon,
     activeIcon: contactActiveIcon
   },

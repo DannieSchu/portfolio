@@ -9,10 +9,10 @@ const Approach = () => {
   const approachElements = approachData.map(item => <ApproachItem key={item.name} {...item} />);
 
   return (
-    <section name='Approach' className={styles.Approach}>
+    <section name='approach' className={styles.Approach}>
       <PageHeading content="Approach" />
       {approachElements}
-      <Arrow element="Tech" container="AboutContainer" />
+      <Arrow element="tech" container="aboutContainer" />
     </section>
   );
 };

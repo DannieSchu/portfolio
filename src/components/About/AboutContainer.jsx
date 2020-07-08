@@ -5,7 +5,7 @@ import Tech from './Tech';
 import styles from './AboutContainer.css';
 
 const AboutContainer = () => (
-  <section id="AboutContainer" className={styles.AboutContainer}>
+  <section id="aboutContainer" className={styles.AboutContainer}>
     <About />
     <Approach />
     <Tech />

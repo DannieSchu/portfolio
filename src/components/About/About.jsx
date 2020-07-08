@@ -6,7 +6,7 @@ import styles from './About.css';
 import typeStyle from '../../styles/type.css';
 
 const About = () => (
-  <section name="About" className={styles.About}>
+  <section name="about" className={styles.About}>
     <img src={selfPortrait} alt="Dannie Schumaker" className={styles.portrait} />
     <section>
       <h3 className={typeStyle.subheading}>Full-stack software developer who makes <i>clunky</i> code <i>beautiful</i>. </h3>
@@ -18,7 +18,7 @@ const About = () => (
         <p>and a passion for finding elegant solutions to complex problems.</p>
       </Typist>
     </section>
-    <Arrow element="Approach" container="AboutContainer" />
+    <Arrow element="approach" container="aboutContainer" />
   </section>
 );
 

@@ -9,14 +9,14 @@ const Tech = () => {
   const techElements = techData.map(element => <TechItem key={element.title} {...element} />);
 
   return (
-    <section name="Tech" className={styles.Tech}>
+    <section name="tech" className={styles.Tech}>
       <PageHeading content="Tech Stack" />
       <section className={styles.techList}>
         <dl className={styles.definitionList}>
           {techElements}
         </dl>
       </section>
-      <Arrow element="Projects" />
+      <Arrow element="projects" />
     </section>
   );
 };
