@@ -22,8 +22,6 @@ exports[`NavLink component renders NavLink 1`] = `
   />
   <p
     className="allCaps"
-  >
-    Home
-  </p>
+  />
 </Link>
 `;

@@ -3,7 +3,7 @@
 exports[`Contact component renders Contact 1`] = `
 <section
   className="Contact"
-  name="Contact"
+  name="contact"
 >
   <PageHeading
     content="Contact"
