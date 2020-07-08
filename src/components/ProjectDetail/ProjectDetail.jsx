@@ -35,6 +35,12 @@ const ProjectDetail = ({ history }) => {
       <LargeButton link={selectedProject.website}>View Site</LargeButton>
     </aside>
   ) : null;
+  
+  const possibleDemo = selectedProject.demo ? (
+    <aside className={styles.website}>
+      <LargeButton>Demo coming soon...</LargeButton>
+    </aside>
+  ) : null;
 
   const imagesBeingLoaded = selectedImages.map((item, i) => (
     <img
@@ -75,6 +81,7 @@ const ProjectDetail = ({ history }) => {
           <GitHubLinks githubLinks={selectedGithubLinks} />
           {possibleContributors}
           {possibleWebsite}
+          {possibleDemo}
           <div style={{ display: 'none' }}>
             {imagesBeingLoaded}
           </div>

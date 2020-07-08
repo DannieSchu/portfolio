@@ -1,10 +1,8 @@
 import apiClient from '../assets/projects/api-client/api-client.png';
 import { alcherithmImages, alcherithmContributors } from './projects/alcherithm';
-import { artistFinderImages } from './projects/artistFinder';
+import { safePlaceForYouthImages, safePlaceForYouthContributors } from './projects/safePlaceForYouth';
 import { sewOrganizedImages, sewOrganizedContributors } from './projects/sewOrganized';
-import { ripeBananaImages } from './projects/ripeBanana';
-import { crossPondNewsroomImages } from './projects/crossPondNewsroom';
-import { socialDistancePingContributors, socialDistancePingImages } from './projects/socialDistancePing';
+import { socialDistancePingImages, socialDistancePingContributors } from './projects/socialDistancePing';
 
 export const projectsData = [
   {
@@ -27,6 +25,23 @@ export const projectsData = [
     website: 'https://alcherithm.netlify.app/',
     contributors: alcherithmContributors,
     images: alcherithmImages
+  },
+  {    
+    title: 'Safe Place for Youth',
+    stack: ['React Native', 'Airtable', 'Geolocation'],
+    year: 2020,
+    description: 'This tech-agnostic mobile app helps youth in crisis quickly navigate to safe locations.',
+    overview: ['Designated safe places are available to Portland youth seeking safe harbor through a national network — but the first step in getting connected to a trusted adult is finding the nearest facility. This tech-agnostic mobile app strives to fill the gap. Winner among Social Service contestants for the Technology Association of Oregon\'s 2020 Design Sprint. Prototype requested by Portland nonprofit New Avenues for Youth.'],
+    process: ['Our approach began with mapping out the problem and outlining our design priorities to meet our audience\'s needs. I created wireframes in Sketch that presented the prioritized information in a friendly and intuitive UI that strove to appeal to young adults. Feedback from our target audience helped us further hone the design and content.', 'My team agreed that in a time of crisis, seeing in a list view whether a location is open or closed is crucial. One of my favorite contributions to this project was implementing this logic in React Native — from creating reusable text components with hard-coded data to developing and integrating the algorithm that compared the current time to each organization\'s opening and closing hours. To execute the latter, I broke the problem down into small steps, implemented each, tested functionality incrementally to ensure each step was working, handled edge cases, and refactored the functioning algorithm for reusability by other components.', 'The team mob-programmed our most important and technically complex screen: a map that displays the nearest safe places based on a user\'s current location. Among my other individual contributions were setting up stack and tabs navigation across the app and passing data through params; building the list and home screens; implementing all styling; and ensuring a consistent UI by creating color constants and reusable components (for text/fonts, buttons, cards, etc.).'],
+    githubLinks: [
+      {
+        text: 'Front-End Repo',
+        link: 'https://github.com/safe-place-for-youth/safe-place-for-youth-fe'
+      }
+    ],
+    demo: ['https://expo.io/@dannieschu/safe-place-for-youth', 'Have the ExpoClient app on your mobile device? Enter @dannieschu/safe-place-for-youth to view the published app.'],
+    contributors: safePlaceForYouthContributors,
+    images: safePlaceForYouthImages
   },
   {
     title: 'Sew Organized',
@@ -90,55 +105,5 @@ export const projectsData = [
     website: null,
     contributors: null,
     images: [apiClient]
-  },
-  {
-    title: 'Ripe Banana',
-    stack: ['Node', 'Express', 'MongoDB', 'Mongoose', 'Jest'],
-    year: 2020,
-    description: 'A RESTful API that navigates complex document relationships to return films, movie studios, actors, reviews and reviewers.',
-    overview: ['Front-end developers seeking an assortment of reliable CRUD routes can use this RESTful API to interact with hundreds of animal-inspired films.'],
-    process: ['To best accommodate the complex nature of the relationships across films, studios, actors, reviews and reviewers, I began by mapping out on paper what data each CRUD route would need. This allowed me to easily build interconnected Mongoose models and seed the database.', 'Adhering to test-driven development principles, I then adopted an incremental approach to the required endpoints — first writing a unit test using Jest, then creating the corresponding Express route.'],
-    githubLinks: [
-      {
-        text: 'Back-End Repo',
-        link: 'https://github.com/DannieSchu/ripe-banana'
-      }],
-    website: null,
-    contributors: null,
-    images: ripeBananaImages
-  },
-  {
-    title: 'Artist Finder',
-    stack: ['React', 'Jest', 'Enzyme'],
-    year: 2020,
-    description: 'Navigate your favorite recording artist’s music portfolio in this fun SPA.',
-    overview: ['Search for a musical artist to view their catalogue of releases. Dive deeper to see each album\'s songs and the corresponding lyrics.'],
-    process: ['The overall strategy for this React app was developed through extensive component diagrams and implemented incrementally in vertical slices. I managed state locally using custom hooks in function components, and I eliminated duplicate code by creating higher order components to generate the multiple list and paging components. Modularizing stylesheets with PostCSS further improved component reusability.'],
-    githubLinks: [
-      {
-        text: 'Front-End Repo',
-        link: 'https://github.com/DannieSchu/artist-finder'
-      }
-    ],
-    website: null,
-    contributors: null,
-    images: artistFinderImages
-  },
-  {
-    title: 'Cross-Pond Newsroom',
-    stack: ['React', 'ContextAPI', 'Jest', 'Enzyme'],
-    year: 2020,
-    description: 'Toggle between two different views to render news headlines from your country of choice — UK or US — in corresponding color schemes.',
-    overview: ['This news application allows users to view articles from the US and the UK in one place! Toggle between two different views to render headlines from your country choice in corresponding color schemes. Article lists are paginated for improved UX.'],
-    process: ['I built each presentation component in this app incrementally with Enzyme snapshot tests and I styled them using PostCSS. In order to easily toggle the color schemes alongside the corresponding API URLs (used to populate different text for each version of the app), I stored state globally using the Context API.', 'I maintained a functioning app as new features were added by adhering to agile methodologies.'],
-    githubLinks: [
-      {
-        text: 'Front-End Repo',
-        link: 'https://github.com/DannieSchu/themeable-list'
-      }
-    ],
-    website: null,
-    contributors: null,
-    images: crossPondNewsroomImages
   }
 ];
