@@ -1,5 +1,5 @@
 .Project {
-  width: 20%;
+  width: 28%;
   min-width: 25rem;
   height: calc(var(--project-overview-height) * 3);
   position: relative;
@@ -67,6 +67,7 @@
 
   @media only screen and (max-width: 768px) {
     min-width: 18rem;
+    left: -8rem;
     height: calc(var(--project-overview-height) * 2.3);
   }
 }

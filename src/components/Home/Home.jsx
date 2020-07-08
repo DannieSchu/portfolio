@@ -15,14 +15,14 @@ const Home = () => {
 
   return (
     <section 
-      name="Home" 
+      name="home" 
       className={styles.Home}
       style={{ opacity }}
     >
       <h1 className={typeStyle.mainHeading}>Dannie<br />Schumaker</h1>
       <img className={styles.largeFlowers} src={largeFlowers} onLoad={() => setImageOneLoaded(true)} alt='flower illustration' />
       <img className={styles.smallFlowers} src={smallFlowers} onLoad={() => setImageTwoLoaded(true)} alt='flower illustration' />
-      <Arrow element="About" container="AboutContainer" icon={salmonIcon} shadowIcon={salmonShadowIcon} />
+      <Arrow element="about" container="aboutContainer" icon={salmonIcon} shadowIcon={salmonShadowIcon} />
     </section>
   );
 };

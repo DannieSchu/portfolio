@@ -13,9 +13,10 @@ const Project = ({
   description,
   githubLinks,
   site,
-  images
+  images,
+  style
 }) => (
-  <section className={styles.Project}>
+  <section className={styles.Project} style={style}>
     <Link to={`/project/${title}`}>
       <img src={images[0]} />
     </Link>
@@ -48,7 +49,8 @@ Project.propTypes = {
     link: PropTypes.string.isRequired
   }).isRequired).isRequired,
   site: PropTypes.string,
-  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
+  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  style: PropTypes.string.isRequired
 };
 
 export default Project;

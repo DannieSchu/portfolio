@@ -3,7 +3,7 @@
 exports[`About component renders About 1`] = `
 <section
   className="About"
-  name="About"
+  name="about"
 >
   <img
     alt="Dannie Schumaker"
@@ -65,8 +65,8 @@ exports[`About component renders About 1`] = `
     </Typist>
   </section>
   <Arrow
-    container="AboutContainer"
-    element="Approach"
+    container="aboutContainer"
+    element="approach"
   />
 </section>
 `;

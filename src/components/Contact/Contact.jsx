@@ -11,7 +11,7 @@ const Contact = () => {
   const contactElements = contactData.map(item => <ContactMethod key={item.link} {...item} />);
 
   return (
-    <section name="Contact" className={styles.Contact}>
+    <section name="contact" className={styles.Contact}>
       <PageHeading content="Contact" />
       <aside className={styles.resume}>
         <LargeButton link={resume}>Resume</LargeButton>
