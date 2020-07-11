@@ -1,11 +1,11 @@
-import homeIcon from '../assets/icons/home.png';
-import homeActiveIcon from '../assets/icons/home-active.png';
-import aboutIcon from '../assets/icons/about.png';
-import aboutActiveIcon from '../assets/icons/about-active.png';
-import projectsIcon from '../assets/icons/projects.png';
-import projectsActiveIcon from '../assets/icons/projects-active.png';
-import contactIcon from '../assets/icons/contact.png';
-import contactActiveIcon from '../assets/icons/contact-active.png';
+import homeIcon from '../assets/icons/home.svg';
+import homeActiveIcon from '../assets/icons/home-active.svg';
+import aboutIcon from '../assets/icons/about.svg';
+import aboutActiveIcon from '../assets/icons/about-active.svg';
+import projectsIcon from '../assets/icons/projects.svg';
+import projectsActiveIcon from '../assets/icons/projects-active.svg';
+import contactIcon from '../assets/icons/contact.svg';
+import contactActiveIcon from '../assets/icons/contact-active.svg';
 
 export const navIconsData = [
   {
