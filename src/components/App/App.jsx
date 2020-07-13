@@ -1,11 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Projects from '../Projects/Projects';
-import AboutContainer from '../About/AboutContainer';
-import Contact from '../Contact/Contact';
+import NavBar from '../Nav/NavBar';
+import Home from '../Home/Home';
 import Loading from '../Loading/Loading';
-const Home = lazy(() => import('../Home/Home'));
-const NavBar = lazy(() => import('../Nav/NavBar'));
+const Projects = lazy(() => import('../Projects/Projects'));
+const AboutContainer = lazy(() => import('../About/AboutContainer'));
+const Contact = lazy(() => import('../Contact/Contact'));
 const ProjectDetail = lazy(() => import('../ProjectDetail/ProjectDetail'));
 
 export default function App() {
