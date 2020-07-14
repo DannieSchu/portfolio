@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Loading.css';
 
-const Loading = ({ timeoutStatus, background }) => (
-  <section className={`${styles.Loading} ${styles[timeoutStatus]} ${styles[background]}`}>
+const Loading = ({ background }) => (
+  <section className={`${styles.Loading} ${styles[background]}`}>
     <div className={styles.spinner}>
       <div />
       <div />
@@ -18,7 +18,6 @@ const Loading = ({ timeoutStatus, background }) => (
 );
 
 Loading.propTypes = {
-  timeoutStatus: PropTypes.string,
   background: PropTypes.string
 };
 
